@@ -108,13 +108,16 @@ class Tree:
                 wealth=delta*s+cash*np.exp(R*self.h[j-1])
                 max_error=max(max_error,float(np.max(abs(wealth[live]-v[live]))) if live.any() else 0.)
             stop=live & l.stop[ix];first[stop]=j;live[stop]=False
-            if j==36: break
+            if j==36:
+                if first[0] in [-1,36]:
+                    examples.append(dict(month=j,spot=float(s[0]),value=float(v[0]),delta=0.,cash=float(wealth[0]),alive=False))
+                break
             new_delta=l.delta[ix];new_cash=l.cash[ix]
             # El coste de rebalanceo es Δnueva*S+Bnueva - riqueza disponible.
             residual=new_delta*s+new_cash-wealth
             max_self=max(max_self,float(np.max(abs(residual[live]))) if live.any() else 0.)
-            if j<36:
-                examples.append(dict(month=j,spot=float(s[0]),value=float(v[0]),delta=float(new_delta[0]),cash=float(new_cash[0]),alive=bool(live[0])))
+            if live[0] or first[0]==j:
+                examples.append(dict(month=j,spot=float(s[0]),value=float(v[0]),delta=float(new_delta[0]) if live[0] else 0.,cash=float(wealth[0]-new_delta[0]*s[0]) if live[0] else float(wealth[0]),alive=bool(live[0])))
             delta=np.where(live,new_delta,0.);cash=np.where(live,wealth-new_delta*s,0.)
             counts[self.groups[j]]+=rng.integers(0,2,n)
         summary=[]
@@ -131,7 +134,12 @@ def european_convolution(tree):
     law={0.:1.}
     for g,a in enumerate(tree.amplitudes):
         n=tree.groups.count(g)
-        law={x+(2*k-n)*a:p*binom.pmf(k,n,.5) for x,p in law.items() for k in range(n+1)}
+        next_law={}
+        for x,p in law.items():
+            for k in range(n+1):
+                state=x+(2*k-n)*a
+                next_law[state]=next_law.get(state,0.)+p*binom.pmf(k,n,.5)
+        law=next_law
     drift=sum(R*tree.h-np.log(np.cosh(tree.a)))
     return sum(p*max(K-50*np.exp(drift+x),0) for x,p in law.items())*np.exp(-3*R)
 

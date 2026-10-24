@@ -1,6 +1,6 @@
 # Encargo de valoración: contrato y rutas de lectura
 
-Estado: **pendiente de resolver**. Esta base organiza el material recibido; las soluciones de clase no son una entrega nueva del trabajo.
+Estado: **resolución nueva preparada para revisión** en [soluciones](../../soluciones/README.md), con [matriz](../../soluciones/MATRIZ_CUMPLIMIENTO.md) y [validación](../../soluciones/VALIDACION.md). Esta ficha conserva el contrato y las rutas docentes; las soluciones de clase no se confunden con la entrega nueva. Las decisiones enumeradas como futuras en esta ficha se resuelven en la memoria, sin reescribir la evidencia original.
 
 Fuentes vinculantes: PDF-002 (enunciado), PPT-001 (desarrollo del ejercicio 3), PDF-001 (entrega y defensa). Los tres originales están en `raw/encargo/`; sus textos completos y fichas se localizan en el [catálogo](../CATALOGO.md).
 

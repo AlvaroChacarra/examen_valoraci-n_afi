@@ -1,0 +1,30 @@
+{
+  "Ejercicio1.xlsx": {
+    "nonempty_cells": 907120,
+    "formula_errors": [],
+    "max_node_error": 5.002220859751105e-12,
+    "states_verified": 46868,
+    "probabilities_verified": 14
+  },
+  "Ejercicio2.xlsx": {
+    "nonempty_cells": 59,
+    "formula_errors": [],
+    "price_errors": {
+      "fra": 1.1368683772161603e-13,
+      "caplet": 4.547473508864641e-12,
+      "floorlet": 4.547473508864641e-13
+    }
+  },
+  "Ejercicio3.xlsx": {
+    "nonempty_cells": 121,
+    "formula_errors": [],
+    "price_errors": {
+      "forward": 3.1086244689504383e-15,
+      "forward_quanto": 2.6645352591003757e-15,
+      "call": 3.730349362740526e-14,
+      "call_quanto": 0.0,
+      "put": 3.552713678800501e-14,
+      "put_quanto": 3.907985046680551e-14
+    }
+  }
+}

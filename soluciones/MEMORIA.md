@@ -7,6 +7,8 @@ lang: es
 geometry: margin=23mm
 fontsize: 11pt
 colorlinks: true
+header-includes:
+  - \usepackage{needspace}
 ---
 
 # Alcance, fuentes y lectura
@@ -115,6 +117,8 @@ Para contraste exacto se propaga una masa inicial 1. En cada nivel se absorbe la
 |Mes 12|1,9010%|[1,8421%; 1,9618%]|1,928711%|1,928711%|
 |Mes 36|6,0420%|[5,9384%; 6,1473%]|6,064783%|12,308531%|
 
+![Primera parada óptima en las fechas contractuales.](figuras/primer_ejercicio.png){width=95%}
+
 La probabilidad exacta de llegar vivo al mes 36 es 49,273003%; la de expirar sin ejercicio es 43,208220%. Las probabilidades de todos los primeros ejercicios más esa expiración suman 1. Los IC anteriores son marginales, no bandas simultáneas de toda la política. Para cada proporción se usa Wilson con $z=1{,}959964$, centro $(\hat p+z^2/(2N))/(1+z^2/N)$ y semiancho $z\sqrt{\hat p(1-\hat p)/N+z^2/(4N^2)}/(1+z^2/N)$.
 
 Estar dentro del dinero en el mes 12 **no** basta para ejercer: puede ser óptimo esperar. Estar ITM al vencimiento sí implica ejercicio para las sendas aún vivas; no cuenta a quienes ya ejercieron. Los JSON y la hoja incluyen las 14 fechas, supervivencia, probabilidad incondicional y condicionada, además de una senda con posiciones y saldos.
@@ -123,12 +127,15 @@ Estar dentro del dinero en el mes 12 **no** basta para ejercer: puede ser óptim
 
 PDF-006 pp.51–53 propone suavizar la discontinuidad de la delta del payoff final. En el nivel 35 se sustituye la media de los dos pagos terminales por la put europea Black–Scholes de un mes, con volatilidad 39% y el mismo tipo:
 
-$$C_{35}^{BS}=Ke^{-rh}\Phi(-d_2)-S_{35}\Phi(-d_1),\quad
- d_1=\frac{\log(S_{35}/K)+(r+\sigma^2/2)h}{\sigma\sqrt h},\quad d_2=d_1-\sigma\sqrt h.$$
+$$C_{35}^{BS}=Ke^{-rh}\Phi(-d_2)-S_{35}\Phi(-d_1).$$
+
+$$d_1=\frac{\log(S_{35}/K)+(r+\sigma^2/2)h}{\sigma\sqrt h},\quad d_2=d_1-\sigma\sqrt h.$$
 
 Se mantiene $V_{35}=\max(K-S_{35},C_{35}^{BS})$ pues el mes 35 es ejercitable. Antes de él se usa el retroceso mensual original. La malla sigue teniendo 36 intervalos; el último se integra analíticamente. Esto **modifica la aproximación de continuación**, no es otro precio exacto del árbol binario original ni se somete a su prueba de réplica de dos ramas.
 
 Para evaluar precisión se usa como referencia la difusión límite de JR con volatilidad anual por tramos, conservando las mismas 14 fechas de parada (no una americana continua). Entre fechas la transición de $x=\log(S/50)$ es normal de media $rh-v/2$ y varianza $v=\int\sigma^2dt$. Se aplica su semigrupo por convolución gaussiana en una malla uniforme de log-precio, seguido del máximo sólo en las fechas contractuales.
+
+\Needspace{11\baselineskip}
 
 |Paso espacial $\Delta x$|Bermuda de difusión (u.m.)|
 |---|---:|
@@ -146,6 +153,8 @@ Se utiliza dominio $x\in[-8,8]$, kernel truncado a nueve desviaciones, convoluci
 |JR con BS en mes 35|9,13920110|0,02553314|
 
 El suavizado reduce el error aproximadamente un 48,15% en **este** contrato. El error restante procede de los otros intervalos binarios y de las fronteras de ejercicio. No se sostiene que siempre mejore: se demuestra aquí frente a la referencia de difusión; la solución solicitada sigue siendo la de 36 pasos.
+
+![Pérdida por contrato en el escenario de 15 días y contraste de precisión del suavizado.](figuras/resultado_y_mejora.png){width=95%}
 
 # Ejercicio 2. FRA y caplet in arrears normales
 
@@ -265,7 +274,7 @@ Usando $A-B=f-K$ y $\Phi(d)+\Phi(-d)=1$ se verifica exactamente $V^C-V^P=V^{FRA}
 
 Al hacer $\sigma_n\to0$ o $T\to t$, $v\to0$; las fórmulas convergen a $Nom\,\delta P(t,T)g(f)$. Para ATM, $A=s/\sqrt{2\pi}$ y el término de convexidad del caplet es $\delta v/2$ dentro del corchete con $P(t,U)$. Al escalar el nominal todos los valores escalan linealmente. En unidades, $\delta F$ es adimensional, $v$ tiene unidades de tipo al cuadrado, $\delta v$ tiene unidades de tipo, y $Nom\,\delta$ veces cada corchete devuelve moneda. Los tipos y devengos usan la misma unidad anual.
 
-**Ejemplo meramente ilustrativo:** $f=3\%$, $K=3{,}2\%$, $T=2$, $\delta=0{,}5$, $\sigma_n=1\%/\sqrt{año}$, $P(0,U)=e^{-0{,}03\cdot2{,}5}$ y $Nom=10^6$. La curva se completa con $P(0,T)=P(0,U)(1+\delta f)$: no se supone simultáneamente un descuento exponencial plano para ambos bonos. Se obtiene:
+**Ejemplo meramente ilustrativo:** $f=3\%$, $K=3{,}2\%$, $T=2$, $\delta=0{,}5$, $\sigma_n=1\%/\sqrt{\text{año}}$, $P(0,U)=e^{-0{,}03\cdot2{,}5}$ y $Nom=10^6$. La curva se completa con $P(0,T)=P(0,U)(1+\delta f)$: no se supone simultáneamente un descuento exponencial plano para ambos bonos. Se obtiene:
 
 |Magnitud|Resultado ilustrativo|
 |---|---:|
@@ -274,7 +283,7 @@ Al hacer $\sigma_n\to0$ o $T\to t$, $v\to0$; las fórmulas convergen a $Nom\,\de
 |Floorlet in arrears|3.127,920154|
 |Strike de equilibrio|3,00985222%|
 
-La integración adaptativa independiente evalúa directamente $g(f+s z)(1+\delta(f+s z))\phi(z)$, separando en el strike; no llama a las fórmulas de momentos. Coincide a menos de $10^{-7}$ u.m. en 54 escenarios con tipos y strikes positivos, negativos y cero, y en dos escalas de volatilidad. Se comprueban además paridad, escala nominal, límites de varianza nula y strike de equilibrio. La hoja E2 presenta inputs ilustrativos editables, todos los momentos y las fórmulas de precio.
+La integración adaptativa independiente evalúa directamente $g(f+s z)(1+\delta(f+s z))\phi(z)$, separando en el strike; no llama a las fórmulas de momentos. Coincide a menos de $10^{-7}$ u.m. en 18 escenarios (54 valores de contratos) con tipos y strikes positivos, negativos y cero, y en dos escalas de volatilidad. Se comprueban además paridad, escala nominal, límites de varianza nula y strike de equilibrio. La hoja E2 presenta inputs ilustrativos editables, todos los momentos y las fórmulas de precio.
 
 ## Alcance de la aproximación normal
 

@@ -32,3 +32,7 @@ Buscar con `rg -n -i 'termino' knowledge-base`. Usar IDs de fuente y página PDF
 ## Cambios y definición de terminado
 
 Leer [OPERACION](knowledge-base/OPERACION.md). Actualizar la ficha que posee la información, las relaciones si cambian y el catálogo si se añade una fuente. Ejecutar `python scripts/validate_knowledge_base.py` y `python scripts/review_readiness.py`; revisar el diff. Mantener una sola ficha canónica por fuente y no añadir transcripciones de conversaciones como evidencia docente.
+
+## Resolución del trabajo
+
+La resolución nueva vive en [soluciones/README.md](soluciones/README.md). Para continuar o auditar, leer su [estado](soluciones/ESTADO.md), [matriz](soluciones/MATRIZ_CUMPLIMIENTO.md), [validación](soluciones/VALIDACION.md) y [paquete de auditoría](soluciones/AUDITORIA.md). `MEMORIA.md` es canónica; no mezclar derivaciones nuevas con extracciones docentes. Reproducir con los comandos de su README y mantener hojas/PDF coherentes tras cambios. El extra de cesta permanece opcional pendiente.

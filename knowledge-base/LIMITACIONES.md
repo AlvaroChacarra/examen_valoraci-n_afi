@@ -48,7 +48,7 @@ Algunos números del nombre de un Excel reflejan la paginación de otra edición
 
 ## Lo que no se ha hecho
 
-No se han ejecutado Solver, What-If ni VBA, ni recalculado los Excel. Se interpretaron estructura y fórmulas estáticamente. No se han generado soluciones nuevas del trabajo ni se ha validado económicamente cada resultado docente. El encargo deja convenciones abiertas para el extra de cesta, enumeradas en [ENCARGO](ejercicios/ENCARGO.md).
+No se han ejecutado Solver, What-If ni VBA, ni recalculado los Excel. Se interpretaron estructura y fórmulas estáticamente. La normalización no generó soluciones nuevas del trabajo ni validó económicamente cada resultado docente. Posteriormente se preparó la [resolución separada](../soluciones/README.md), con sus propios controles y límites; ello no recalcula ni certifica todos los ejemplos docentes. El encargo deja convenciones abiertas para el extra de cesta, enumeradas en [ENCARGO](ejercicios/ENCARGO.md).
 
 ## Compresión de series
 

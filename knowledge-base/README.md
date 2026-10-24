@@ -20,4 +20,4 @@ El enunciado define el encargo. Los documentos teóricos definen los modelos de 
 
 ## Estado
 
-Base reconciliada y revisada por segunda vez a 24/10/2026. Material de clase e instrucciones incorporados; [dictamen de preparación](REVISION_PREPARACION.md) con correcciones y decisiones metodológicas pendientes. No se ha empezado a resolver numéricamente el trabajo; esa tarea es posterior y debe guardarse aparte de las fuentes originales.
+Base reconciliada y revisada por segunda vez a 24/10/2026. Material de clase e instrucciones incorporados; [dictamen de preparación](REVISION_PREPARACION.md) con correcciones y decisiones metodológicas pendientes. La resolución nueva está separada en [soluciones](../soluciones/README.md), con memoria, tres libros recalculados, código y verificaciones. La certificación documental de esta base no sustituye la [validación de la solución](../soluciones/VALIDACION.md).

@@ -1,5 +1,7 @@
 # Segunda revisión — aptitud para preparar los tres ejercicios
 
+Nota de estado: esta revisión certifica la preparación documental previa. La resolución posterior y su validación están en [soluciones](../soluciones/README.md); las expresiones «pendiente» y «al resolver» de este dictamen describen aquel alcance previo.
+
 **Veredicto: APTA para comenzar los tres ejercicios obligatorios.** Certificación documental acotada a las fuentes incorporadas el 24/10/2026: integridad, extracción, dependencias y rutas metodológicas. No certifica todavía precios, cobertura de una implementación, fórmulas nuevas ni una entrega final del alumno.
 
 Base revisada: commit `82e829924135448be4850998ebe7813f85c0c682`. Modo RECONCILE: se conserva la estructura canónica y se corrigen sus huecos, sin crear otra base paralela.

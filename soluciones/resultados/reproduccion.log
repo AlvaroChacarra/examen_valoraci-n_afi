@@ -1,0 +1,213 @@
+{
+  "european": {
+    "initial": 8.921639042393917,
+    "after15": 8.175125718868147,
+    "change": -0.7465133235257699,
+    "financed": -0.7542161435751158
+  },
+  "bermuda": {
+    "initial": 9.162907590996308,
+    "after15": 8.39074302059929,
+    "change": -0.7721645703970186,
+    "financed": -0.7800756983822303
+  },
+  "american": {
+    "initial": 9.197452168513163,
+    "after15": 8.419723401650947,
+    "change": -0.7777287668622161,
+    "financed": -0.7856697201590137
+  },
+  "local_residual": 1.509903313490213e-14,
+  "budget_residual": 1.4210854715202004e-14,
+  "european_convolution": 8.921639042393926,
+  "smoothed": 9.13920110142147,
+  "diffusion_references": {
+    "0.004": 9.113894122073434,
+    "0.002": 9.113753097406098,
+    "0.001": 9.11369123671069,
+    "0.0005": 9.113670479243073,
+    "0.00025": 9.113667958805443
+  },
+  "states": 16471
+}
+{
+  "label": "Ejemplo ilustrativo, no datos del enunciado",
+  "inputs": {
+    "f": 0.03,
+    "k": 0.032,
+    "variance": 0.0002,
+    "delta": 0.5,
+    "p_u": 0.9277434863285529,
+    "nominal": 1000000.0
+  },
+  "T": 2.0,
+  "sigma_n": 0.01,
+  "closed": {
+    "fra": -895.2724643070541,
+    "caplet": 2232.6476896711756,
+    "floorlet": 3127.9201539782293,
+    "par_strike": 0.030098522167487683
+  },
+  "quadrature": {
+    "fra": -895.2724643070508,
+    "caplet": 2232.647689671176,
+    "floorlet": 3127.920153978227
+  }
+}
+{
+  "label": "Ejemplo ilustrativo, no datos del enunciado ni de la cesta",
+  "inputs": {
+    "s0": 100.0,
+    "k": 105.0,
+    "x0": 0.9,
+    "rd": 0.03,
+    "rf": 0.02,
+    "q": 0.01,
+    "ss": 0.25,
+    "sx": 0.12,
+    "rho": 0.4,
+    "t": 2.0
+  },
+  "closed": {
+    "forward": -2.576721402286573,
+    "forward_quanto": -5.084776073273162,
+    "call": 11.311997004309763,
+    "call_quanto": 11.1248906882463,
+    "put": 13.888718406596336,
+    "put_quanto": 16.20966676151946,
+    "mu_s": -0.002,
+    "sigma_m": 0.12,
+    "sigma_n": 0.3176476034853718,
+    "rho_mn": 0.6925914050226145
+  },
+  "quadrature": {
+    "forward": -2.5767214022865694,
+    "forward_quanto": -5.084776073273169,
+    "call": 11.311997004309765,
+    "call_quanto": 11.124890688246303,
+    "put": 13.888718406596334,
+    "put_quanto": 16.209666761519472
+  },
+  "mc": {
+    "n": 1000000,
+    "seed": 20261025,
+    "estimates": {
+      "forward": {
+        "mean": -2.6009190285966035,
+        "se": 0.033309462035964715,
+        "ci95": [
+          -2.666204375046461,
+          -2.535633682146746
+        ]
+      },
+      "forward_quanto": {
+        "mean": -5.1086837744625635,
+        "se": 0.03421443347435844,
+        "ci95": [
+          -5.175742832352701,
+          -5.041624716572426
+        ]
+      },
+      "call": {
+        "mean": 11.30019423856816,
+        "se": 0.023922834300262198,
+        "ci95": [
+          11.25330634456168,
+          11.34708213257464
+        ]
+      },
+      "call_quanto": {
+        "mean": 11.117161171305087,
+        "se": 0.022357973243626258,
+        "ci95": [
+          11.073340348634616,
+          11.160981993975557
+        ]
+      },
+      "put": {
+        "mean": 13.901113267164764,
+        "se": 0.01493477103587802,
+        "ci95": [
+          13.8718416535862,
+          13.930384880743327
+        ]
+      },
+      "put_quanto": {
+        "mean": 16.225844945767648,
+        "se": 0.017606176837466844,
+        "ci95": [
+          16.19133747298858,
+          16.260352418546717
+        ]
+      },
+      "M": {
+        "mean": 0.9000156981305139,
+        "se": 0.0001537485373825907,
+        "ci95": [
+          0.8997143565321913,
+          0.9003170397288364
+        ]
+      },
+      "N": {
+        "mean": 89.97692921431687,
+        "se": 0.042505890735197796,
+        "ci95": [
+          89.89361919868794,
+          90.0602392299458
+        ]
+      },
+      "corr_log_mn": 0.6925780354438857,
+      "corr_log_sx": 0.4002961576412865
+    }
+  }
+}
+test_contract_and_martingale (test_ejercicio1.TestJR.test_contract_and_martingale) ... ok
+test_reference_semigroup (test_ejercicio1.TestJR.test_reference_semigroup) ... ok
+test_replication_and_simulation (test_ejercicio1.TestJR.test_replication_and_simulation) ... ok
+test_smoothing_precision (test_ejercicio1.TestJR.test_smoothing_precision) ... ok
+test_values_and_exact_probabilities (test_ejercicio1.TestJR.test_values_and_exact_probabilities) ... ok
+test_limits_and_scaling (test_ejercicio2.TestNormal.test_limits_and_scaling) ... ok
+test_quadrature_and_parity (test_ejercicio2.TestNormal.test_quadrature_and_parity) ... ok
+test_zero_time_and_par_strike (test_ejercicio2.TestNormal.test_zero_time_and_par_strike) ... ok
+test_limits_and_sign (test_ejercicio3.TestQuanto.test_limits_and_sign) ... ok
+test_quadrature_and_parities (test_ejercicio3.TestQuanto.test_quadrature_and_parities) ... ok
+test_simulation_martingales (test_ejercicio3.TestQuanto.test_simulation_martingales) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.033s
+
+OK
+Tres libros generados con fórmulas
+convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio1.xlsx as a Calc document -> /workspace/examen_valoraci-n_afi/tmp/recalculadas/Ejercicio1.xlsx using filter : Calc Office Open XML
+convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio2.xlsx as a Calc document -> /workspace/examen_valoraci-n_afi/tmp/recalculadas/Ejercicio2.xlsx using filter : Calc Office Open XML
+convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio3.xlsx as a Calc document -> /workspace/examen_valoraci-n_afi/tmp/recalculadas/Ejercicio3.xlsx using filter : Calc Office Open XML
+{
+  "Ejercicio1.xlsx": {
+    "nonempty_cells": 907120,
+    "formula_errors": [],
+    "max_node_error": 5.002220859751105e-12,
+    "states_verified": 46868,
+    "probabilities_verified": 14
+  },
+  "Ejercicio2.xlsx": {
+    "nonempty_cells": 59,
+    "formula_errors": [],
+    "price_errors": {
+      "fra": 1.1368683772161603e-13,
+      "caplet": 4.547473508864641e-12,
+      "floorlet": 4.547473508864641e-13
+    }
+  },
+  "Ejercicio3.xlsx": {
+    "nonempty_cells": 121,
+    "formula_errors": [],
+    "price_errors": {
+      "forward": 3.1086244689504383e-15,
+      "forward_quanto": 2.6645352591003757e-15,
+      "call": 3.730349362740526e-14,
+      "call_quanto": 0.0,
+      "put": 3.552713678800501e-14,
+      "put_quanto": 3.907985046680551e-14
+    }
+  }
+}

@@ -2,6 +2,8 @@
 
 Base de conocimiento de los materiales de José María Contreras y Javier Calderón, preparada para consultar la teoría y los ejercicios sin interpretar de nuevo los Excel.
 
+La [resolución nueva de los tres ejercicios](soluciones/README.md) incluye memoria PDF, hojas recalculadas, Python, pruebas y guía de defensa. La evidencia docente permanece separada e intacta.
+
 ## Empezar
 
 1. [Entrada para agentes](AGENTS.md).
@@ -22,13 +24,14 @@ Base de conocimiento de los materiales de José María Contreras y Javier Calder
 | `knowledge-base/conceptos/` | Notación y fórmulas revisadas, con referencias a clase |
 | `knowledge-base/assets/` | Imágenes matemáticas y enunciados recuperados de los Excel, deduplicados |
 | `catalogo.json` | Procedencia dentro de los ZIP, nombres originales, rutas normalizadas y SHA-256 |
+| `soluciones/` | Resolución nueva, entregables y validación independiente; extra de cesta opcional pendiente |
 | `scripts/` | Normalización y validación reproducibles |
 
 Se han normalizado los nombres de ruta; los bytes de los 59 documentos originales se conservan. Las cadenas de ZIP se registran sin duplicar archivos comprimidos y descomprimidos en Git.
 
 ## Alcance
 
-La base contiene **10 PDF (620 páginas), 48 libros Excel y un PPT de 25 diapositivas**. La extracción es estática: no se han recalculado libros, ejecutado macros ni resuelto el trabajo evaluable. Las soluciones incluidas son las suministradas en clase. Las observaciones sobre errores y convenciones están en [limitaciones](knowledge-base/LIMITACIONES.md).
+La base contiene **10 PDF (620 páginas), 48 libros Excel y un PPT de 25 diapositivas**. La extracción docente es estática: no se han recalculado sus libros ni ejecutado macros. Las soluciones de clase están en raw; la resolución nueva del trabajo evaluable, con validación propia, está en [soluciones](soluciones/README.md). Las observaciones sobre errores y convenciones están en [limitaciones](knowledge-base/LIMITACIONES.md).
 
 ## Mantenimiento
 

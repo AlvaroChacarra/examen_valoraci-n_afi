@@ -47,3 +47,7 @@ El repositorio debe permitir descubrir el propósito, alcance, fuentes, marco me
 Ejecutar además `python scripts/review_readiness.py`: coteja directamente los originales y no depende de metadata local. Verifica fórmulas, nombres locales/globales, estados de hojas, OCR, enlaces y alcanzabilidad. La opción `--archives-dir` añade la comparación de todos los documentos finales de los ZIP anidados. No recalcula precios ni ejecuta macros.
 
 complete_pdf_ocr.py conserva caché en metadata/ocr-cache, ligada al SHA-256 del PDF; no debe reutilizarla con una fuente distinta. Las fichas de hojas ocultas incluyen aclaraciones editoriales del ámbito de nombres: mantenerlas si se regeneran fichas. La revisión canónica es [REVISION_PREPARACION](REVISION_PREPARACION.md).
+
+## Soluciones nuevas y continuidad
+
+Las derivaciones propias y sus entregables están en [soluciones](../soluciones/README.md). Allí se mantienen dependencias, comandos, pruebas y recálculo de los nuevos libros. No ejecutar el normalizador para regenerar o modificar estas soluciones; no recalcular raw. Después de una modificación material actualizar la memoria canónica y repetir los controles específicos, el recálculo de hojas afectadas y la revisión visual del PDF.

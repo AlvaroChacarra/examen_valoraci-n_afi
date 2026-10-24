@@ -1,0 +1,9 @@
+{
+  "commit": "5c0e1df515917a57dad2a718ef30765f97c85998",
+  "seed": 21731,
+  "E2_scenarios": 50,
+  "E2_max_error_currency_nominal_1e6": 1.761039704283208e-08,
+  "E3_scenarios": 12,
+  "E3_call_usual_max_error_eur": 3.552713678800501e-14,
+  "scope": "Payoff integration checks; does not replace analytic audit or full test suite."
+}
