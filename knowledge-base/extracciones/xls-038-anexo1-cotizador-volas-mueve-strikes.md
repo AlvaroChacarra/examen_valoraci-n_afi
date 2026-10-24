@@ -8,13 +8,42 @@ Macros VBA: **False**. Vínculos externos: **0**. Objetos incrustados: **0**.
 
 ## Nombres definidos
 
-| Nombre | Referencia |
-|---|---|
-| `desc` | `Hoja1!$D$8` |
-| `DT` | `Hoja1!$D$7` |
-| `F0` | `Hoja1!$D$5` |
-| `Nom` | `Hoja1!$D$3` |
-| `T` | `Hoja1!$D$6` |
+Un nombre local prevalece sobre el nombre de libro al evaluar fórmulas de su hoja. Se incluyen los parámetros Solver, sin ejecutarlo.
+
+| Nombre | Ámbito | Referencia | Oculto |
+|---|---|---|---|
+| `desc` | `libro` | `Hoja1!$D$8` | 0 |
+| `DT` | `libro` | `Hoja1!$D$7` | 0 |
+| `F0` | `libro` | `Hoja1!$D$5` | 0 |
+| `Nom` | `libro` | `Hoja1!$D$3` | 0 |
+| `solver_adj` | `Hoja1` | `Hoja1!$N$28` | 1 |
+| `solver_cvg` | `Hoja1` | `0.0001` | 1 |
+| `solver_drv` | `Hoja1` | `1` | 1 |
+| `solver_eng` | `Hoja1` | `1` | 1 |
+| `solver_est` | `Hoja1` | `1` | 1 |
+| `solver_itr` | `Hoja1` | `2147483647` | 1 |
+| `solver_mip` | `Hoja1` | `2147483647` | 1 |
+| `solver_mni` | `Hoja1` | `30` | 1 |
+| `solver_mrt` | `Hoja1` | `0.075` | 1 |
+| `solver_msl` | `Hoja1` | `2` | 1 |
+| `solver_neg` | `Hoja1` | `2` | 1 |
+| `solver_nod` | `Hoja1` | `2147483647` | 1 |
+| `solver_num` | `Hoja1` | `0` | 1 |
+| `solver_nwt` | `Hoja1` | `1` | 1 |
+| `solver_opt` | `Hoja1` | `Hoja1!$M$28` | 1 |
+| `solver_pre` | `Hoja1` | `0.000001` | 1 |
+| `solver_rbv` | `Hoja1` | `1` | 1 |
+| `solver_rlx` | `Hoja1` | `2` | 1 |
+| `solver_rsd` | `Hoja1` | `0` | 1 |
+| `solver_scl` | `Hoja1` | `1` | 1 |
+| `solver_sho` | `Hoja1` | `2` | 1 |
+| `solver_ssz` | `Hoja1` | `100` | 1 |
+| `solver_tim` | `Hoja1` | `2147483647` | 1 |
+| `solver_tol` | `Hoja1` | `0.01` | 1 |
+| `solver_typ` | `Hoja1` | `3` | 1 |
+| `solver_val` | `Hoja1` | `0` | 1 |
+| `solver_ver` | `Hoja1` | `3` | 1 |
+| `T` | `libro` | `Hoja1!$D$6` | 0 |
 
 ## Hoja: Hoja1
 

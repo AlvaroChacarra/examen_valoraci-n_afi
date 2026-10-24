@@ -8,12 +8,74 @@ Macros VBA: **False**. Vínculos externos: **0**. Objetos incrustados: **0**.
 
 ## Nombres definidos
 
-| Nombre | Referencia |
-|---|---|
-| `deltat` | `Sheet1!$B$7` |
-| `Nom` | `Sheet1!$AA$27` |
-| `strike` | `Sheet1!$Y$27` |
-| `vola` | `Sheet1!$C$7` |
+Un nombre local prevalece sobre el nombre de libro al evaluar fórmulas de su hoja. Se incluyen los parámetros Solver, sin ejecutarlo.
+
+| Nombre | Ámbito | Referencia | Oculto |
+|---|---|---|---|
+| `deltat` | `Sheet2` | `Sheet2!$B$7` | 0 |
+| `deltat` | `libro` | `Sheet1!$B$7` | 0 |
+| `Nom` | `Sheet2` | `Sheet2!$AA$27` | 0 |
+| `Nom` | `libro` | `Sheet1!$AA$27` | 0 |
+| `solver_adj` | `Sheet1` | `Sheet1!$C$10:$G$10` | 1 |
+| `solver_adj` | `Sheet2` | `Sheet2!$AG$65:$AG$66` | 1 |
+| `solver_cvg` | `Sheet1` | `0.0001` | 1 |
+| `solver_cvg` | `Sheet2` | `0.0001` | 1 |
+| `solver_drv` | `Sheet1` | `1` | 1 |
+| `solver_drv` | `Sheet2` | `1` | 1 |
+| `solver_eng` | `Sheet1` | `1` | 1 |
+| `solver_eng` | `Sheet2` | `1` | 1 |
+| `solver_est` | `Sheet1` | `1` | 1 |
+| `solver_est` | `Sheet2` | `1` | 1 |
+| `solver_itr` | `Sheet1` | `1000` | 1 |
+| `solver_itr` | `Sheet2` | `1000` | 1 |
+| `solver_lin` | `Sheet1` | `2` | 1 |
+| `solver_lin` | `Sheet2` | `2` | 1 |
+| `solver_mip` | `Sheet1` | `2147483647` | 1 |
+| `solver_mip` | `Sheet2` | `2147483647` | 1 |
+| `solver_mni` | `Sheet1` | `30` | 1 |
+| `solver_mni` | `Sheet2` | `30` | 1 |
+| `solver_mrt` | `Sheet1` | `0.075` | 1 |
+| `solver_mrt` | `Sheet2` | `0.075` | 1 |
+| `solver_msl` | `Sheet1` | `2` | 1 |
+| `solver_msl` | `Sheet2` | `2` | 1 |
+| `solver_neg` | `Sheet1` | `2` | 1 |
+| `solver_neg` | `Sheet2` | `2` | 1 |
+| `solver_nod` | `Sheet1` | `2147483647` | 1 |
+| `solver_nod` | `Sheet2` | `2147483647` | 1 |
+| `solver_num` | `Sheet1` | `0` | 1 |
+| `solver_num` | `Sheet2` | `0` | 1 |
+| `solver_nwt` | `Sheet1` | `1` | 1 |
+| `solver_nwt` | `Sheet2` | `1` | 1 |
+| `solver_opt` | `Sheet1` | `Sheet1!$T$16` | 1 |
+| `solver_opt` | `Sheet2` | `Sheet2!$AK$69` | 1 |
+| `solver_pre` | `Sheet1` | `0.000001` | 1 |
+| `solver_pre` | `Sheet2` | `0.000001` | 1 |
+| `solver_rbv` | `Sheet1` | `1` | 1 |
+| `solver_rbv` | `Sheet2` | `1` | 1 |
+| `solver_rlx` | `Sheet1` | `1` | 1 |
+| `solver_rlx` | `Sheet2` | `1` | 1 |
+| `solver_rsd` | `Sheet1` | `0` | 1 |
+| `solver_rsd` | `Sheet2` | `0` | 1 |
+| `solver_scl` | `Sheet1` | `2` | 1 |
+| `solver_scl` | `Sheet2` | `2` | 1 |
+| `solver_sho` | `Sheet1` | `2` | 1 |
+| `solver_sho` | `Sheet2` | `2` | 1 |
+| `solver_ssz` | `Sheet1` | `100` | 1 |
+| `solver_ssz` | `Sheet2` | `100` | 1 |
+| `solver_tim` | `Sheet1` | `1000` | 1 |
+| `solver_tim` | `Sheet2` | `1000` | 1 |
+| `solver_tol` | `Sheet1` | `5` | 1 |
+| `solver_tol` | `Sheet2` | `0.05` | 1 |
+| `solver_typ` | `Sheet1` | `3` | 1 |
+| `solver_typ` | `Sheet2` | `3` | 1 |
+| `solver_val` | `Sheet1` | `0` | 1 |
+| `solver_val` | `Sheet2` | `0` | 1 |
+| `solver_ver` | `Sheet1` | `3` | 1 |
+| `solver_ver` | `Sheet2` | `3` | 1 |
+| `strike` | `Sheet2` | `Sheet2!$Y$27` | 0 |
+| `strike` | `libro` | `Sheet1!$Y$27` | 0 |
+| `vola` | `Sheet2` | `Sheet2!$C$7` | 0 |
+| `vola` | `libro` | `Sheet1!$C$7` | 0 |
 
 ## Hoja: Sheet1
 

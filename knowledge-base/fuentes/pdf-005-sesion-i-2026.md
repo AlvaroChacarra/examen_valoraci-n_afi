@@ -173,3 +173,8 @@ Los títulos siguientes son extractos breves para recuperación. El texto comple
 | 136 | Apéndice: / Complementos / 08. |
 | 137 | Véase para más detalle / Documentación teórica del / Curso |
 | 138 | Gracias |
+
+
+## Recuperación ampliada en segunda revisión
+
+Todas las 138 páginas incluyen ahora OCR auxiliar separado del texto nativo. El índice previo describe los bloques; para texto dibujado consultar la extracción ampliada. El OCR no certifica signos ni fracciones: para ecuaciones, usar conceptos y el PDF teórico relacionado.

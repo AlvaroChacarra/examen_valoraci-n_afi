@@ -40,7 +40,7 @@ XLS-040 y XLS-043 contienen un vínculo externo y fórmulas `[1]!interpol(...)`.
 
 ## Extracción de PDF, fórmulas e imágenes
 
-Los PDF se extrajeron sin reordenar por coordenadas porque las notas de teoría están giradas 90 grados y ese reordenamiento mezclaba las palabras. PDF-006 tiene muchas capturas: se añadió OCR a 60 páginas con poco texto. Las fracciones, raíces, subíndices y signos OCR pueden ser incorrectos.
+Los PDF se extrajeron sin reordenar por coordenadas porque las notas de teoría están giradas 90 grados y ese reordenamiento mezclaba las palabras. PDF-005 y PDF-006 tienen muchas capturas: tras la segunda revisión se añadió OCR auxiliar a todas sus páginas (138 y 74, respectivamente). Las fracciones, raíces, subíndices y signos OCR pueden ser incorrectos.
 
 Se extrajeron 60 imágenes únicas de los Excel, incluidas fórmulas y enunciados. Se conservan como PNG enlazados desde Markdown y se revisaron visualmente. El OCR sirve para búsqueda; las fórmulas centrales están reescritas en conceptos. Una fotografía decorativa repetida no aporta reglas de cálculo.
 
@@ -53,3 +53,7 @@ No se han ejecutado Solver, What-If ni VBA, ni recalculado los Excel. Se interpr
 ## Compresión de series
 
 Las series numéricas posteriores a la fila 100 se compactan por columna; las fórmulas repetidas se agrupan por traslación. Se preservan todas las etiquetas de celdas, familias de cálculo, comentarios y nombres, además de los originales con hash. Esta capa está diseñada para explicar métodos, no para reproducir cada realización aleatoria pegada como número.
+
+## Segunda revisión: correcciones de extracción
+
+Se incorporaron 490 nombres locales en 15 libros: el extractor anterior sólo recogía 307 nombres de libro. El ámbito local es esencial en las hojas ocultas de XLS-009/011/012; no implica una dependencia del nombre global cuando existe uno local. También se recuperó el contenido gráfico de la sesión I mediante OCR. Ver [el dictamen](REVISION_PREPARACION.md) para alcance y condiciones de preparación.

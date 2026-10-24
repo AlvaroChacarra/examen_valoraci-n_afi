@@ -8,12 +8,41 @@ Macros VBA: **False**. Vínculos externos: **0**. Objetos incrustados: **0**.
 
 ## Nombres definidos
 
-| Nombre | Referencia |
-|---|---|
-| `deltat` | `Sheet1!$B$7` |
-| `K` | `Sheet1!$J$6` |
-| `Nom` | `Sheet1!$J$5` |
-| `shift` | `Sheet1!$M$4` |
+Un nombre local prevalece sobre el nombre de libro al evaluar fórmulas de su hoja. Se incluyen los parámetros Solver, sin ejecutarlo.
+
+| Nombre | Ámbito | Referencia | Oculto |
+|---|---|---|---|
+| `deltat` | `libro` | `Sheet1!$B$7` | 0 |
+| `K` | `libro` | `Sheet1!$J$6` | 0 |
+| `Nom` | `libro` | `Sheet1!$J$5` | 0 |
+| `shift` | `libro` | `Sheet1!$M$4` | 0 |
+| `solver_adj` | `Sheet1` | `Sheet1!$L$8:$L$18` | 1 |
+| `solver_cvg` | `Sheet1` | `0.0001` | 1 |
+| `solver_drv` | `Sheet1` | `1` | 1 |
+| `solver_eng` | `Sheet1` | `1` | 1 |
+| `solver_est` | `Sheet1` | `1` | 1 |
+| `solver_itr` | `Sheet1` | `100000` | 1 |
+| `solver_mip` | `Sheet1` | `2147483647` | 1 |
+| `solver_mni` | `Sheet1` | `30` | 1 |
+| `solver_mrt` | `Sheet1` | `0.075` | 1 |
+| `solver_msl` | `Sheet1` | `2` | 1 |
+| `solver_neg` | `Sheet1` | `1` | 1 |
+| `solver_nod` | `Sheet1` | `2147483647` | 1 |
+| `solver_num` | `Sheet1` | `0` | 1 |
+| `solver_nwt` | `Sheet1` | `1` | 1 |
+| `solver_opt` | `Sheet1` | `Sheet1!$T$19` | 1 |
+| `solver_pre` | `Sheet1` | `0.000001` | 1 |
+| `solver_rbv` | `Sheet1` | `1` | 1 |
+| `solver_rlx` | `Sheet1` | `2` | 1 |
+| `solver_rsd` | `Sheet1` | `0` | 1 |
+| `solver_scl` | `Sheet1` | `1` | 1 |
+| `solver_sho` | `Sheet1` | `2` | 1 |
+| `solver_ssz` | `Sheet1` | `100` | 1 |
+| `solver_tim` | `Sheet1` | `2147483647` | 1 |
+| `solver_tol` | `Sheet1` | `0.01` | 1 |
+| `solver_typ` | `Sheet1` | `2` | 1 |
+| `solver_val` | `Sheet1` | `0` | 1 |
+| `solver_ver` | `Sheet1` | `3` | 1 |
 
 ## Hoja: Sheet1
 

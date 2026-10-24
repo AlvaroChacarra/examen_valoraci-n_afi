@@ -105,3 +105,8 @@ Fórmulas literales con valores guardados. No son una nueva valoración; se sele
 Proyecto VBA presente: **False**. Vínculos externos declarados: **0**. Los módulos recuperados y los textos de objetos están en la extracción.
 
 Las ecuaciones y enunciados incrustados como imágenes se recuperan por separado en [imágenes de Excel](../extracciones/imagenes-excel.md); este documento permite consultarlos sin reabrir el libro.
+
+
+## Ámbito de nombres verificado en segunda revisión
+
+El cuadro anterior recoge referencias de libro. La extracción incluye además los nombres locales de cada hoja. En una hoja oculta, el nombre local prevalece sobre el global: no sustituirlo por una referencia a la hoja visible. Las diferencias de alcance se comprobaron directamente en `xl/workbook.xml`.

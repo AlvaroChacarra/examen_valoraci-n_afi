@@ -11,6 +11,7 @@ Base documental para estudiar el curso y preparar los ejercicios. Hay dos nivele
 | Recuperar enunciados o ecuaciones incrustados en Excel | [Imágenes extraídas y OCR](extracciones/imagenes-excel.md) |
 | Saber qué no debe asumirse | [Limitaciones y discrepancias](LIMITACIONES.md) |
 | Reproducir o ampliar la normalización | [Operación](OPERACION.md) |
+| Comprobar aptitud para los tres ejercicios | [Segunda revisión y condiciones](REVISION_PREPARACION.md) |
 | Ver cobertura comprobada | [Control de cobertura](CONTROL_COBERTURA.md) |
 
 ## Prioridad de la evidencia
@@ -19,4 +20,4 @@ El enunciado define el encargo. Los documentos teóricos definen los modelos de 
 
 ## Estado
 
-BOOTSTRAP de un repositorio inicialmente vacío, a 24/10/2026. Material de clase e instrucciones incorporados. No se ha empezado a resolver numéricamente el trabajo; esa tarea es posterior y debe guardarse aparte de las fuentes originales.
+Base reconciliada y revisada por segunda vez a 24/10/2026. Material de clase e instrucciones incorporados; [dictamen de preparación](REVISION_PREPARACION.md) con correcciones y decisiones metodológicas pendientes. No se ha empezado a resolver numéricamente el trabajo; esa tarea es posterior y debe guardarse aparte de las fuentes originales.

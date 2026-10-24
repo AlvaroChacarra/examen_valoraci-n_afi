@@ -8,22 +8,72 @@ Macros VBA: **False**. Vínculos externos: **0**. Objetos incrustados: **0**.
 
 ## Nombres definidos
 
-| Nombre | Referencia |
-|---|---|
-| `d` | `Hoja1!$C$15` |
-| `Deltat` | `Hoja1!$C$9` |
-| `Descuento` | `Hoja1!$C$10` |
-| `dividendo1` | `Hoja1!$F$6` |
-| `dividendo2` | `Hoja1!$H$6` |
-| `p` | `Hoja1!$C$13` |
-| `probs` | `Hoja1!$P$20:$P$32` |
-| `S0` | `Hoja1!$C$6` |
-| `strike` | `Hoja1!$C$93` |
-| `Tiempo1` | `Hoja1!$F$5` |
-| `Tiempo2` | `Hoja1!$H$5` |
-| `tipo` | `Hoja1!$C$4` |
-| `u` | `Hoja1!$C$14` |
-| `vola` | `Hoja1!$C$5` |
+Un nombre local prevalece sobre el nombre de libro al evaluar fórmulas de su hoja. Se incluyen los parámetros Solver, sin ejecutarlo.
+
+| Nombre | Ámbito | Referencia | Oculto |
+|---|---|---|---|
+| `d` | `Hoja2` | `Hoja2!$C$15` | 0 |
+| `d` | `libro` | `Hoja1!$C$15` | 0 |
+| `Deltat` | `Hoja2` | `Hoja2!$C$9` | 0 |
+| `Deltat` | `libro` | `Hoja1!$C$9` | 0 |
+| `Descuento` | `Hoja2` | `Hoja2!$C$10` | 0 |
+| `Descuento` | `libro` | `Hoja1!$C$10` | 0 |
+| `dividendo1` | `Hoja2` | `Hoja2!$F$6` | 0 |
+| `dividendo1` | `libro` | `Hoja1!$F$6` | 0 |
+| `dividendo2` | `Hoja2` | `Hoja2!$H$6` | 0 |
+| `dividendo2` | `libro` | `Hoja1!$H$6` | 0 |
+| `p` | `Hoja2` | `Hoja2!$C$13` | 0 |
+| `p` | `libro` | `Hoja1!$C$13` | 0 |
+| `probs` | `Hoja2` | `Hoja2!$P$20:$P$32` | 0 |
+| `probs` | `libro` | `Hoja1!$P$20:$P$32` | 0 |
+| `S0` | `Hoja2` | `Hoja2!$C$6` | 0 |
+| `S0` | `libro` | `Hoja1!$C$6` | 0 |
+| `solver_adj` | `Hoja1` | `Hoja1!#REF!` | 1 |
+| `solver_adj` | `Hoja2` | `Hoja2!#REF!` | 1 |
+| `solver_cvg` | `Hoja1` | `0.0001` | 1 |
+| `solver_cvg` | `Hoja2` | `0.0001` | 1 |
+| `solver_drv` | `Hoja1` | `1` | 1 |
+| `solver_drv` | `Hoja2` | `1` | 1 |
+| `solver_est` | `Hoja1` | `1` | 1 |
+| `solver_est` | `Hoja2` | `1` | 1 |
+| `solver_itr` | `Hoja1` | `100` | 1 |
+| `solver_itr` | `Hoja2` | `100` | 1 |
+| `solver_lin` | `Hoja1` | `2` | 1 |
+| `solver_lin` | `Hoja2` | `2` | 1 |
+| `solver_neg` | `Hoja1` | `2` | 1 |
+| `solver_neg` | `Hoja2` | `2` | 1 |
+| `solver_num` | `Hoja1` | `0` | 1 |
+| `solver_num` | `Hoja2` | `0` | 1 |
+| `solver_nwt` | `Hoja1` | `1` | 1 |
+| `solver_nwt` | `Hoja2` | `1` | 1 |
+| `solver_opt` | `Hoja1` | `Hoja1!$F$10` | 1 |
+| `solver_opt` | `Hoja2` | `Hoja2!$F$10` | 1 |
+| `solver_pre` | `Hoja1` | `0.000001` | 1 |
+| `solver_pre` | `Hoja2` | `0.000001` | 1 |
+| `solver_scl` | `Hoja1` | `2` | 1 |
+| `solver_scl` | `Hoja2` | `2` | 1 |
+| `solver_sho` | `Hoja1` | `2` | 1 |
+| `solver_sho` | `Hoja2` | `2` | 1 |
+| `solver_tim` | `Hoja1` | `100` | 1 |
+| `solver_tim` | `Hoja2` | `100` | 1 |
+| `solver_tol` | `Hoja1` | `0.05` | 1 |
+| `solver_tol` | `Hoja2` | `0.05` | 1 |
+| `solver_typ` | `Hoja1` | `3` | 1 |
+| `solver_typ` | `Hoja2` | `3` | 1 |
+| `solver_val` | `Hoja1` | `0` | 1 |
+| `solver_val` | `Hoja2` | `0` | 1 |
+| `strike` | `Hoja2` | `Hoja2!$C$93` | 0 |
+| `strike` | `libro` | `Hoja1!$C$93` | 0 |
+| `Tiempo1` | `Hoja2` | `Hoja2!$F$5` | 0 |
+| `Tiempo1` | `libro` | `Hoja1!$F$5` | 0 |
+| `Tiempo2` | `Hoja2` | `Hoja2!$H$5` | 0 |
+| `Tiempo2` | `libro` | `Hoja1!$H$5` | 0 |
+| `tipo` | `Hoja2` | `Hoja2!$C$4` | 0 |
+| `tipo` | `libro` | `Hoja1!$C$4` | 0 |
+| `u` | `Hoja2` | `Hoja2!$C$14` | 0 |
+| `u` | `libro` | `Hoja1!$C$14` | 0 |
+| `vola` | `Hoja2` | `Hoja2!$C$5` | 0 |
+| `vola` | `libro` | `Hoja1!$C$5` | 0 |
 
 ## Hoja: Hoja1
 

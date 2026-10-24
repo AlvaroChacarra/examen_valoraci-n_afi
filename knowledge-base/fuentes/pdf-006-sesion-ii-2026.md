@@ -112,3 +112,8 @@ Los títulos siguientes son extractos breves para recuperación. El texto comple
 | 72 | Página gráfica; consultar OCR o documento original |
 | 73 | Véase para más detalle / Documentación teórica del / Curso |
 | 74 | Gracias |
+
+
+## Recuperación ampliada en segunda revisión
+
+Todas las 74 páginas incluyen ahora OCR auxiliar separado del texto nativo. El índice previo describe los bloques; para texto dibujado consultar la extracción ampliada. El OCR no certifica signos ni fracciones: para ecuaciones, usar conceptos y el PDF teórico relacionado.

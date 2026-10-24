@@ -8,7 +8,7 @@
 4. Leer los Excel estáticamente: hojas incluidas ocultas, etiquetas, constantes, fórmulas, cachés, nombres definidos, comentarios, gráficos y dependencias.
 5. Agrupar fórmulas equivalentes por traslación para evitar miles de filas repetidas. Conservar ejemplos literales y límites de posición.
 6. Recuperar VBA desde el contenedor OLE sin ejecutarlo. Extraer bitmaps de los EMF y las demás imágenes; deduplicar por hash, aplicar OCR y conservar imágenes para contraste.
-7. Añadir OCR a las páginas imagen de Sesion_II. Reescribir en conceptos las fórmulas centrales que la extracción desordena.
+7. Añadir OCR auxiliar a todas las páginas de Sesion_I y Sesion_II mediante complete_pdf_ocr.py. Reescribir en conceptos las fórmulas centrales que la extracción desordena.
 8. Crear una ficha editorial por fuente y enlazar plantilla, solución, teoría y ejercicios del encargo.
 9. Validar cobertura, hashes y enlaces antes de publicar.
 
@@ -21,6 +21,7 @@ Desde la raíz, con los cinco archivos originales adjuntos en un directorio de e
 ```bash
 python scripts/normalize_sources.py --input-dir /ruta/a/adjuntos
 python scripts/supplement_extraction.py
+python scripts/complete_pdf_ocr.py
 python scripts/build_knowledge_base.py
 python scripts/validate_knowledge_base.py
 ```
@@ -40,3 +41,9 @@ No regenerar todas las fichas ante una duda puntual. Cambiar la ficha que posee 
 ## Comprobación desde cero
 
 El repositorio debe permitir descubrir el propósito, alcance, fuentes, marco metodológico, estado del encargo, limitaciones, procedimiento de regeneración y validación sin disponer del chat previo. AGENTS actúa como ruta de entrada, no como enciclopedia.
+
+## Segunda revisión de conformidad
+
+Ejecutar además `python scripts/review_readiness.py`: coteja directamente los originales y no depende de metadata local. Verifica fórmulas, nombres locales/globales, estados de hojas, OCR, enlaces y alcanzabilidad. La opción `--archives-dir` añade la comparación de todos los documentos finales de los ZIP anidados. No recalcula precios ni ejecuta macros.
+
+complete_pdf_ocr.py conserva caché en metadata/ocr-cache, ligada al SHA-256 del PDF; no debe reutilizarla con una fuente distinta. Las fichas de hojas ocultas incluyen aclaraciones editoriales del ámbito de nombres: mantenerlas si se regeneran fichas. La revisión canónica es [REVISION_PREPARACION](REVISION_PREPARACION.md).

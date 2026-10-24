@@ -8,16 +8,26 @@ Macros VBA: **True**. Vínculos externos: **0**. Objetos incrustados: **0**.
 
 ## Nombres definidos
 
-| Nombre | Referencia |
-|---|---|
-| `callput` | `Hoja1!$H$63` |
-| `deltat` | `Hoja1!$E$4` |
-| `factorVola` | `Hoja1!$H$19` |
-| `nuevostiempos` | `Hoja1!$E$22:$K$22` |
-| `pasovola` | `Hoja1!$E$19` |
-| `S0` | `Hoja1!$E$13` |
-| `strike` | `Hoja1!$F$63` |
-| `T` | `Hoja1!$E$3` |
+Un nombre local prevalece sobre el nombre de libro al evaluar fórmulas de su hoja. Se incluyen los parámetros Solver, sin ejecutarlo.
+
+| Nombre | Ámbito | Referencia | Oculto |
+|---|---|---|---|
+| `callput` | `Hoja2` | `Hoja2!$H$63` | 0 |
+| `callput` | `libro` | `Hoja1!$H$63` | 0 |
+| `deltat` | `Hoja2` | `Hoja2!$E$4` | 0 |
+| `deltat` | `libro` | `Hoja1!$E$4` | 0 |
+| `factorVola` | `Hoja2` | `Hoja2!$H$19` | 0 |
+| `factorVola` | `libro` | `Hoja1!$H$19` | 0 |
+| `nuevostiempos` | `Hoja2` | `Hoja2!$E$22:$K$22` | 0 |
+| `nuevostiempos` | `libro` | `Hoja1!$E$22:$K$22` | 0 |
+| `pasovola` | `Hoja2` | `Hoja2!$E$19` | 0 |
+| `pasovola` | `libro` | `Hoja1!$E$19` | 0 |
+| `S0` | `Hoja2` | `Hoja2!$E$13` | 0 |
+| `S0` | `libro` | `Hoja1!$E$13` | 0 |
+| `strike` | `Hoja2` | `Hoja2!$F$63` | 0 |
+| `strike` | `libro` | `Hoja1!$F$63` | 0 |
+| `T` | `Hoja2` | `Hoja2!$E$3` | 0 |
+| `T` | `libro` | `Hoja1!$E$3` | 0 |
 
 ## Hoja: Hoja1
 

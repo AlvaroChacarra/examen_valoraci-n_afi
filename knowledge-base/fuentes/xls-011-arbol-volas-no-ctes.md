@@ -99,3 +99,10 @@ Las ecuaciones y enunciados incrustados como imágenes se recuperan por separado
 
 Procedimientos recuperados: `InterPola`.
 La interpolación del curso busca el tramo mediante bisección. Modo 0: lineal en logaritmos del valor. Modo 1: lineal en niveles. El fuente se conserva, incluidos posibles problemas de argumentos opcionales y extrapolación.
+
+
+## Ámbito de nombres verificado en segunda revisión
+
+El cuadro anterior recoge referencias de libro. La extracción incluye además los nombres locales de cada hoja. En una hoja oculta, el nombre local prevalece sobre el global: no sustituirlo por una referencia a la hoja visible. Las diferencias de alcance se comprobaron directamente en `xl/workbook.xml`.
+
+Por ejemplo, `pasovola` del libro refiere a `Hoja1!$E$19`, mientras el nombre local de Hoja2 refiere a `Hoja2!$E$19`; ocurre también con `nuevostiempos`, `factorVola` y los datos del contrato. La hoja oculta conserva así su propio desarrollo; no es correcto atribuirle el cero de una casilla visible incompleta.

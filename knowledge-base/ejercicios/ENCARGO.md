@@ -4,6 +4,8 @@ Estado: **pendiente de resolver**. Esta base organiza el material recibido; las 
 
 Fuentes vinculantes: PDF-002 (enunciado), PPT-001 (desarrollo del ejercicio 3), PDF-001 (entrega y defensa). Los tres originales están en `raw/encargo/`; sus textos completos y fichas se localizan en el [catálogo](../CATALOGO.md).
 
+La [segunda revisión de preparación](../REVISION_PREPARACION.md) certifica el alcance documental y reúne decisiones y pruebas que deben cerrarse al resolver.
+
 ## Ejercicio 1: put bermuda con Jarrow–Rudd
 
 | Dato | Valor |

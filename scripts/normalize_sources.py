@@ -38,6 +38,25 @@ def show(x):
     if hasattr(x,'isoformat'): return x.isoformat()
     return x if isinstance(x,(str,int,float,bool,type(None))) else str(x)
 
+def defined_names_xml(path):
+    """Keep workbook and sheet scope; openpyxl workbook.names omits local names."""
+    with ZipFile(path) as z:
+        root=etree.fromstring(z.read('xl/workbook.xml'))
+    sheets=root.findall('.//{*}sheets/{*}sheet')
+    result=[]
+    for x in root.findall('.//{*}definedNames/{*}definedName'):
+        scope=x.get('localSheetId')
+        result.append({'name':x.get('name'),'ref':x.text or '',
+                       'local_sheet_id':int(scope) if scope is not None else None,
+                       'scope':sheets[int(scope)].get('name') if scope is not None else 'libro',
+                       'hidden':x.get('hidden','0')})
+    return result
+
+def names_markdown(names):
+    return ['## Nombres definidos','','Un nombre local prevalece sobre el nombre de libro al evaluar fórmulas de su hoja. Se incluyen los parámetros Solver, sin ejecutarlo.','',
+            '| Nombre | Ámbito | Referencia | Oculto |','|---|---|---|---|']+[
+        f'| `{md(x["name"])}` | `{md(x["scope"])}` | `{md(x["ref"])}` | {x["hidden"]} |' for x in names]+['']
+
 def ingest(input_dir):
     records=[]
     archives=[]
@@ -127,7 +146,7 @@ def xlsx_extract(r):
     wb=openpyxl.load_workbook(ROOT/r['path'],data_only=False,read_only=False,keep_links=True)
     cached=openpyxl.load_workbook(ROOT/r['path'],data_only=True,read_only=False,keep_links=False)
     meta={'source_id':r['id'],'names':[], 'sheets':[], 'vba':False,'external_links':0,'functions':{}}
-    for k,v in wb.defined_names.items():meta['names'].append({'name':k,'ref':v.attr_text})
+    meta['names']=defined_names_xml(ROOT/r['path'])
     with ZipFile(ROOT/r['path']) as z:
         meta['vba']='xl/vbaProject.bin' in z.namelist()
         meta['external_links']=len([n for n in z.namelist() if re.fullmatch(r'xl/externalLinks/externalLink\d+\.xml',n)])
@@ -138,9 +157,7 @@ def xlsx_extract(r):
         'Lectura estática: fórmulas, etiquetas, notas, valores guardados y dependencias. No se han recalculado fórmulas ni ejecutado macros. Los valores guardados son evidencia del archivo, no resultados verificados de una nueva ejecución.', '',
         f'Macros VBA: **{meta["vba"]}**. Vínculos externos: **{meta["external_links"]}**. Objetos incrustados: **{len(meta["embeddings"])}**.', '']
     if meta['names']:
-        out+=['## Nombres definidos','','| Nombre | Referencia |','|---|---|']
-        out += [f'| `{md(x["name"])}` | `{md(x["ref"])}` |' for x in meta['names']]
-        out+=['']
+        out+=names_markdown(meta['names'])
     funcs=collections.Counter()
     for ws in wb.worksheets:
         cs=cached[ws.title]
