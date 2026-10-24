@@ -1,0 +1,24 @@
+{
+  "label": "Ejemplo ilustrativo, no datos del enunciado",
+  "inputs": {
+    "f": 0.03,
+    "k": 0.032,
+    "variance": 0.0002,
+    "delta": 0.5,
+    "p_u": 0.9277434863285529,
+    "nominal": 1000000.0
+  },
+  "T": 2.0,
+  "sigma_n": 0.01,
+  "closed": {
+    "fra": -895.2724643070541,
+    "caplet": 2232.6476896711756,
+    "floorlet": 3127.9201539782293,
+    "par_strike": 0.030098522167487683
+  },
+  "quadrature": {
+    "fra": -895.2724643070508,
+    "caplet": 2232.647689671176,
+    "floorlet": 3127.920153978227
+  }
+}

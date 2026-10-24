@@ -146,3 +146,138 @@ Se utiliza dominio $x\in[-8,8]$, kernel truncado a nueve desviaciones, convoluci
 |JR con BS en mes 35|9,13920110|0,02553314|
 
 El suavizado reduce el error aproximadamente un 48,15% en **este** contrato. El error restante procede de los otros intervalos binarios y de las fronteras de ejercicio. No se sostiene que siempre mejore: se demuestra aquí frente a la referencia de difusión; la solución solicitada sigue siendo la de 36 pasos.
+
+# Ejercicio 2. FRA y caplet in arrears normales
+
+## Contrato, numerario y cambio de fecha de pago
+
+PDF-002 p.3 define $U=T+\delta$, fixing en $T$ para el periodo $[T,U]$, con **pago en $T$** de $Nom\,\delta(F_T-K)$ o $Nom\,\delta(F_T-K)^+$. Aquí $F_T=R(T,U)$, $Nom$ es nominal en la moneda del contrato y $K,F$ son tipos simples anuales. El enunciado no aporta cifras. La derivación siguiente es general para $0\le t\le T$; $\tau=T-t$.
+
+En una sola curva (PDF-008 pp.5–8),
+
+$$F_t=\frac{P(t,T)/P(t,U)-1}{\delta},\quad
+1+\delta F_t=\frac{P(t,T)}{P(t,U)},\quad
+1+\delta F_T=\frac1{P(T,U)}.$$
+
+Se toma el bono $P(t,U)$ como numerario; su medida es $Q^U$. El cociente de bonos y, por linealidad, $F_t$, son martingalas. Un flujo $H_T$ que paga antes de vencer el numerario se valora como
+
+$$V_t=P(t,U)E_t^{Q^U}\left[\frac{H_T}{P(T,U)}\right].$$
+
+Por tanto, para $g(x)=x-K$ o $(x-K)^+$,
+
+$$V_t=Nom\,\delta P(t,U)E_t^{Q^U}[g(F_T)(1+\delta F_T)].\tag{E2.1}$$
+
+El factor adicional **multiplica**, no divide el payoff. No se añade el denominador de un FRA comercial liquidado por descuento de su liquidación: sería otro contrato. Este paso retoma el argumento de PDF-008 pp.14–19 pero **no** sus momentos lognormales.
+
+Formalmente, la densidad del cambio de $Q^U$ a la medida $Q^T$, hasta $T$, sería
+
+$$\left.\frac{dQ^T}{dQ^U}\right|_T
+=\frac{1+\delta F_T}{1+\delta F_t}.$$
+
+Entonces $V_t=P(t,T)E_t^{Q^T}[H_T]$. Esta igualdad explica por qué descontar en $T$ manteniendo sin cambios la distribución $Q^U$ pierde el ajuste. La positividad de esa densidad se matiza al final: en el normal ilimitado es una identidad formal de la aproximación, no un cambio global de probabilidad exacto.
+
+## Dinámica y momentos completos
+
+Se postula bajo $Q^U$ (PDF-009 pp.38–40)
+
+$$dF_s=\sigma_n(s)dW_s^U,\qquad
+F_T=f+sZ,\quad f=F_t,\quad s=\sqrt v,\quad
+v=\int_t^T\sigma_n(u)^2du,\quad Z\sim N(0,1).$$
+
+La forma normal es válida para volatilidad determinista integrable; si la volatilidad es constante, $v=\sigma_n^2\tau$. No se afirma normalidad con una volatilidad estocástica arbitraria. $\sigma_n$ tiene unidades de tipo anual por raíz de año: 0,01 significa 100 puntos básicos por raíz de año, no un 1% relativo a $f$.
+
+Sean $\phi(z)=e^{-z^2/2}/\sqrt{2\pi}$ y $\Phi$ su integral acumulada. Por simetría, $E[Z]=0$; usando $\phi'=-z\phi$ e integración por partes, $E[Z^2]=1$. Así,
+
+$$E[F_T]=f,\qquad E[F_T^2]=f^2+v.$$
+
+Luego
+
+$$E[(F_T-K)(1+\delta F_T)]
+=(f-K)+\delta(f^2+v-Kf)
+=(1+\delta f)(f-K)+\delta v.$$
+
+La fórmula solicitada del FRA es
+
+$$\boxed{V_t^{FRA}=Nom\,\delta P(t,U)
+\big[(1+\delta f)(f-K)+\delta v\big].}\tag{E2.2}$$
+
+Usando $P(t,T)=P(t,U)(1+\delta f)$ también puede escribirse
+
+$$V_t^{FRA}=Nom\,\delta P(t,T)
+\left[f+\frac{\delta v}{1+\delta f}-K\right].$$
+
+El strike que anula el FRA es $K_{IA}=f+\delta v/(1+\delta f)$. El denominador aparece **al factorizar para expresar el strike**, no como un descuento extra del payoff. Para $1+\delta f>0$ el ajuste de timing es positivo: el peso $1+\delta F_T$ aumenta los escenarios de tipos altos. A diferencia del caso lognormal, la corrección de segundo momento es $v$, no $f^2(e^{\sigma^2\tau}-1)$.
+
+## Momentos truncados y caplet
+
+Para $s>0$, sea $a=(K-f)/s$ y $d=-a=(f-K)/s$. El evento de ejercicio es $Z>a$. Calculamos explícitamente:
+
+$$I_0=\int_a^\infty\phi(z)dz=\Phi(-a)=\Phi(d),$$
+
+$$I_1=\int_a^\infty z\phi(z)dz=[-\phi(z)]_a^\infty=\phi(a),$$
+
+$$I_2=\int_a^\infty z^2\phi(z)dz
+=[-z\phi(z)]_a^\infty+\int_a^\infty\phi(z)dz
+=a\phi(a)+\Phi(-a).$$
+
+Los términos de frontera en infinito son cero porque la gaussiana domina cualquier polinomio. Por expansión de $f+sZ$:
+
+$$E[1_{F_T>K}]=\Phi(d),$$
+
+$$E[F_T1_{F_T>K}]=f\Phi(d)+s\phi(d),$$
+
+$$E[F_T^2 1_{F_T>K}]=(f^2+v)\Phi(d)+(f+K)s\phi(d).$$
+
+La última expresión usa $2fs+s^2a=(f+K)s$. Definimos el momento Bachelier sin descuento
+
+$$A=E[(F_T-K)^+]=(f-K)\Phi(d)+s\phi(d).$$
+
+Restando $K$ veces el momento de primer grado al de segundo grado:
+
+$$E[F_T(F_T-K)^+]
+=[f(f-K)+v]\Phi(d)+fs\phi(d)
+=fA+v\Phi(d).$$
+
+Al sustituir en (E2.1), obtenemos
+
+$$\boxed{V_t^C=Nom\,\delta P(t,U)
+\left[(1+\delta f)\big((f-K)\Phi(d)+s\phi(d)\big)
++\delta v\Phi(d)\right].}\tag{E2.3}$$
+
+Para volatilidad constante basta usar $s=\sigma_n\sqrt{T-t}$. La fórmula equivalente con descuento al fixing es
+
+$$V_t^C=Nom\,\delta P(t,T)
+\left[A+\frac{\delta v}{1+\delta f}\Phi(d)\right].$$
+
+El primer término es Bachelier con descuento en $T$; el segundo mide el cambio de distribución por pago temprano, no un ajuste lognormal copiado. En `ejercicio2.py`, `variance` representa $v$, `a` representa $A$ y `p_u` representa $P(t,U)$; se separa explícitamente la rama $v=0$ para evitar dividir por cero.
+
+## Floorlet, paridad, límites y unidades
+
+Como control adicional, $B=E[(K-F_T)^+]=(K-f)\Phi(-d)+s\phi(d)$ y
+
+$$E[F_T(K-F_T)^+]=fB-v\Phi(-d).$$
+
+Por tanto, el floorlet equivalente, que también paga en $T$, vale
+
+$$V_t^P=Nom\,\delta P(t,U)[(1+\delta f)B-\delta v\Phi(-d)].$$
+
+Usando $A-B=f-K$ y $\Phi(d)+\Phi(-d)=1$ se verifica exactamente $V^C-V^P=V^{FRA}$. Una paridad con floorlet de pago en $U$ no correspondería a los mismos contratos.
+
+Al hacer $\sigma_n\to0$ o $T\to t$, $v\to0$; las fórmulas convergen a $Nom\,\delta P(t,T)g(f)$. Para ATM, $A=s/\sqrt{2\pi}$ y el término de convexidad del caplet es $\delta v/2$ dentro del corchete con $P(t,U)$. Al escalar el nominal todos los valores escalan linealmente. En unidades, $\delta F$ es adimensional, $v$ tiene unidades de tipo al cuadrado, $\delta v$ tiene unidades de tipo, y $Nom\,\delta$ veces cada corchete devuelve moneda. Los tipos y devengos usan la misma unidad anual.
+
+**Ejemplo meramente ilustrativo:** $f=3\%$, $K=3{,}2\%$, $T=2$, $\delta=0{,}5$, $\sigma_n=1\%/\sqrt{año}$, $P(0,U)=e^{-0{,}03\cdot2{,}5}$ y $Nom=10^6$. La curva se completa con $P(0,T)=P(0,U)(1+\delta f)$: no se supone simultáneamente un descuento exponencial plano para ambos bonos. Se obtiene:
+
+|Magnitud|Resultado ilustrativo|
+|---|---:|
+|FRA in arrears|−895,272464|
+|Caplet in arrears|2.232,647690|
+|Floorlet in arrears|3.127,920154|
+|Strike de equilibrio|3,00985222%|
+
+La integración adaptativa independiente evalúa directamente $g(f+s z)(1+\delta(f+s z))\phi(z)$, separando en el strike; no llama a las fórmulas de momentos. Coincide a menos de $10^{-7}$ u.m. en 54 escenarios con tipos y strikes positivos, negativos y cero, y en dos escalas de volatilidad. Se comprueban además paridad, escala nominal, límites de varianza nula y strike de equilibrio. La hoja E2 presenta inputs ilustrativos editables, todos los momentos y las fórmulas de precio.
+
+## Alcance de la aproximación normal
+
+Una normal no degenerada asigna probabilidad positiva a $F_T<-1/\delta$. Pero un bono estrictamente positivo exige $1+\delta F_T=1/P(T,U)>0$. Los dos supuestos no definen globalmente un modelo exacto coherente de bonos positivos. Incluso la densidad formal de cambio de medida puede resultar negativa en esa cola. La inconsistencia afecta al modelo global, no al cálculo de los momentos solicitados.
+
+Resolvemos la **aproximación normal docente sin truncar su distribución**, como pide el encargo. En el ejemplo la frontera está a más de 140 desviaciones típicas; esto explica su insignificancia numérica allí, pero no elimina la incompatibilidad matemática. Para otras escalas la cola podría ser material e incluso originar precios formales negativos de flujos no negativos; no habría que interpretarlos como precios de arbitraje de un modelo global válido. No se introduce silenciosamente una distribución truncada o desplazada, pues alteraría el ejercicio.
