@@ -1,0 +1,79 @@
+{
+  "commit": "92be7d90c6d1961e90e6a308eb9980accbd17156",
+  "directory": "/tmp/mefc_audit_input_b2_ecz_n",
+  "edits": {
+    "1": {
+      "B2": 55.0
+    },
+    "2": {
+      "B6": 0.02
+    },
+    "3": {
+      "B10": -0.3,
+      "B4": 1.1
+    }
+  },
+  "engine_stdout": "convert /tmp/mefc_audit_input_b2_ecz_n/input/Ejercicio1.xlsx as a Calc document -> /tmp/mefc_audit_input_b2_ecz_n/output/Ejercicio1.xlsx using filter : Calc Office Open XML\nconvert /tmp/mefc_audit_input_b2_ecz_n/input/Ejercicio2.xlsx as a Calc document -> /tmp/mefc_audit_input_b2_ecz_n/output/Ejercicio2.xlsx using filter : Calc Office Open XML\nconvert /tmp/mefc_audit_input_b2_ecz_n/input/Ejercicio3.xlsx as a Calc document -> /tmp/mefc_audit_input_b2_ecz_n/output/Ejercicio3.xlsx using filter : Calc Office Open XML\n",
+  "observed": {
+    "E1": {
+      "J2": 7.60554124101848,
+      "K2": 7.80067246982206,
+      "L2": 7.82663204067586,
+      "M2": 7.82194183667965,
+      "P2": 1,
+      "P3": 0.5,
+      "P4": 0.5
+    },
+    "E2": {
+      "B17": -756.110941357771,
+      "B18": 4942.73658202677,
+      "B19": 5698.84752338454,
+      "B9": 0.0008,
+      "B10": 0.0282842712474619
+    },
+    "E3": {
+      "B24": -3.14932615835026,
+      "B25": -1.06125252122512,
+      "B26": 13.8257741163786,
+      "B27": 13.2764848330199,
+      "B28": 16.9751002747289,
+      "B29": 14.3377373542451,
+      "B13": 0.019,
+      "B15": 0.242693221990232
+    }
+  },
+  "checks": {
+    "E1": {
+      "J2": true,
+      "K2": true,
+      "L2": true,
+      "M2": true,
+      "P2": true,
+      "P3": true,
+      "P4": true
+    },
+    "E2": {
+      "B17": true,
+      "B18": true,
+      "B19": true,
+      "B9": true,
+      "B10": true
+    },
+    "E3": {
+      "B24": true,
+      "B25": true,
+      "B26": true,
+      "B27": true,
+      "B28": true,
+      "B29": true,
+      "B13": true,
+      "B15": true
+    }
+  },
+  "errors": {
+    "E1": [],
+    "E2": [],
+    "E3": []
+  },
+  "passed": true
+}

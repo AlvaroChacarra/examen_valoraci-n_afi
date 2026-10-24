@@ -56,3 +56,7 @@ Otro agente, con contexto inicial limpio y lectura de fuentes, revisó matemáti
 - Los nombres del grupo y la entrega/defensa personal siguen a cargo del alumno. El extra independiente de cesta sigue opcional pendiente.
 
 Versiones del sistema usadas: Python 3.12.14; Pandoc 3.1.11.1; LibreOfficeDev 26.8.0.0.alpha0 (recalculo documentado, sin errores en los casos cotejados); XeTeX de TeX Live 2025/dev. Las versiones Python se fijan en requirements.txt.
+
+## Dictamen final de integración
+
+**PASS sobre `92be7d90c6d1961e90e6a308eb9980accbd17156`**, sin hallazgos materiales abiertos: [informe independiente](auditoria/REVISION_INTEGRADA.md). La reproducción completa aislada pasa con 12 pruebas y la [perturbación de los tres libros](auditoria/perturbacion_92be7d9.json) demuestra cálculo efectivo tras editar spot E1, volatilidad E2 y correlación/FX E3. No se ha ejecutado Microsoft Excel; el motor efectivamente probado es LibreOffice con recálculo forzado. El PDF regenerado coincide visualmente en sus 18 páginas.

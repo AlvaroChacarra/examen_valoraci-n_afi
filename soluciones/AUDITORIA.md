@@ -44,3 +44,19 @@ Comandos completos y dependencias en [README](README.md). Ejecutar `python -m so
 Priorizar revisión material: ¿son fieles los calendarios y monedas? ¿la simulación replica el modelo valorado? ¿las masas se absorben una sola vez? ¿el factor de pago anticipado se encuentra en el lugar correcto? ¿las covariaciones fijan el signo quanto? ¿se justifica la referencia de mejora? ¿las hojas recalculan de verdad? ¿los límites y paridades usan contratos equivalentes? Separar errores, evidencia insuficiente y mejoras editoriales. No modificar raw ni aceptar caches docentes como solución.
 
 La auditoría posterior está preparada pero no se afirma realizada en otra conversación. La revisión independiente de esta ejecución y sus límites se documentan por separado.
+
+## Cierre: versión exacta para auditar
+
+**Código, entradas, fórmulas y entregables auditados:** `92be7d90c6d1961e90e6a308eb9980accbd17156`. Consultar esa revisión exacta para reproducir el paquete técnico; los commits posteriores de cierre sólo incorporan este dictamen y sus punteros/evidencias.
+
+**Dictamen integrado: PASS**, sin hallazgos materiales abiertos, en [REVISION_INTEGRADA.md](auditoria/REVISION_INTEGRADA.md). Incluye reproducción completa aislada, 12 pruebas, recálculo completo forzado y cambio de entradas en los tres libros. [Hashes de los entregables](auditoria/artefactos_92be7d9.json), [cotejo XLSX](auditoria/xlsx_verificados_92be7d9.json), [sensibilidad de entradas](auditoria/perturbacion_92be7d9.json) y [log de reproducción](auditoria/reproduccion_92be7d9.log) fijan la evidencia.
+
+La versión `7bc599d` no debe usarse como entrega aceptada: su [revisión integrada fallida](auditoria/REVISION_INTEGRADA_7bc599d.md) detectó conservación de cachés y una función normal incompatible al cálculo efectivo. La corrección en `92be7d9` recalcula, verifica auxiliares y supera los controles con inputs modificados; el núcleo matemático mantiene los mismos resultados. Conservar el fallo es parte de la trazabilidad, no un pendiente abierto.
+
+Para repetir la prueba de entradas sobre el commit exacto:
+
+```bash
+python soluciones/auditoria/perturba_inputs_xlsx.py --commit 92be7d90c6d1961e90e6a308eb9980accbd17156 --output /tmp/inputs_92be7d9.json
+```
+
+No queda trabajo técnico abierto en los tres ejercicios y la call usual adicional. Los nombres de integrantes y la entrega/defensa personal son tareas del alumno; la cesta permanece opcional pendiente. Main y raw se conservan intactos.
