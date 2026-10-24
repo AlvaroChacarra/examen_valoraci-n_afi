@@ -4,7 +4,7 @@
 
 ## Pruebas específicas ejecutadas
 
-`python -m unittest discover -s soluciones/tests -v`: **11 pruebas pasan** (5 E1, 3 E2, 3 E3). Semillas fijas y contrastes deterministas permiten detectar regresiones numéricas; no se compara sólo con cifras pegadas.
+`python -m unittest discover -s soluciones/tests -v`: **12 pruebas pasan** (5 E1, 3 E2, 3 E3 y una regresión del motor de hojas). Semillas fijas y contrastes deterministas permiten detectar regresiones numéricas; no se compara sólo con cifras pegadas.
 
 |Prueba|Qué puede detectar|Resultado / criterio|
 |---|---|---|
@@ -18,15 +18,20 @@
 |E2 cuadratura original|Ajuste de distribución/pago o momentos erróneos|18 escenarios,54 valores; discrepancia<1e−7 con Nom 1e6|
 |E2 paridad y límites|Contratos no equivalentes, σ absoluta confundida, división por cero|Caplet−floorlet=FRA; límites v→0 y T→0, nominal y strike par|
 |E3 cuadratura y MC|FX extra o ausente, ajuste quanto incorrecto, rho auxiliar confundido|Cinco correlaciones en cuadratura;1e6 pares MC; medias dentro de5SE y en IC95 en ejemplo|
+|Motor de hojas: cachés erróneas y normal|Conversión sin recálculo y función normal incompatible|Fixture de cachés −999; recálculo forzado entrega 4 y Φ(0)=0,5|
 |E3 martingalas, paridades, límites|Signo de deriva o moneda incorrecta|E[M]=M0,E[N]=N0; σ=0, T=0, ρ=±1 y caso N constante; usual invariante a rd,ρ,σFX|
 
 La prueba estocástica usa 5SE como umbral de regresión para evitar que un IC95 marginal se convierta en criterio de aceptación múltiple. Los IC95 se reportan como incertidumbre estadística del estimador, no de la dinámica ni de los supuestos.
 
 ## Hojas de cálculo
 
-Se generaron tres libros .xlsx sin macros ni enlaces externos y se **recalcularon realmente** mediante LibreOffice `soffice --headless --convert-to xlsx`, usando otro directorio para no sobrescribir la entrada antes del cotejo. El generador contiene fórmulas visibles; las cifras Python auxiliares no constituyen su único cálculo.
+La auditoría integrada del commit `7bc599d` detectó que la conversión inicial con el perfil por defecto conservaba cachés auxiliares a cero: aquella evidencia de recálculo era insuficiente. Al provocar cálculo efectivo también apareció una incompatibilidad de `NORM.S.DIST` sin prefijo de función futura. Se retiró esa versión como entrega aceptada; el informe y la reproducción del fallo se conservan en `auditoria/REVISION_INTEGRADA_7bc599d.md`.
 
-`python -m soluciones.src.verifica_hojas` vuelve a leer los valores guardados por el motor ofimático y coteja los **46.868 estados** de Arbol0 y Arbol15: spots, europea, bermuda, americana, mejorada y política; comprueba además14 fechas de probabilidades. Máxima diferencia entre valores de nodo y Python: **5,01e−12**; tolerancia1e−9. Los residuos locales/de presupuesto de la hoja son<1e−10. Hay más de 900.000 celdas no vacías en E1. Se escanean todos los libros para detectar errores de fórmula: ninguno. Precios E2 y E3 coinciden con Python a menos de1e−7, con errores observados menores de5e−12. Evidencia exacta en `resultados/hojas_verificadas.json`.
+La corrección usa la función compatible `NORMDIST(x,0,1,acumulada)` y un perfil aislado con `OOXMLRecalcMode=0`, que fuerza recálculo completo al abrir antes de exportar los tres libros. Un fixture comienza con cachés deliberadamente erróneas de −999 y verifica que se transforman en 4 para `A1^2` y 0,5 para Φ(0). El verificador ampliado rechaza correctamente la entrega anterior en Arbol0!P3 (0 frente a 0,5 esperado); esa regresión está registrada en `resultados/cache_obsoleta_rechazada.log`.
+
+Se generaron tres libros .xlsx sin macros ni enlaces externos y se **recalcularon realmente** mediante LibreOffice con ese perfil forzado, usando otro directorio para no sobrescribir la entrada antes del cotejo. El generador contiene fórmulas visibles; las cifras Python auxiliares no constituyen su único cálculo.
+
+`python -m soluciones.src.verifica_hojas` vuelve a leer los valores guardados por el motor ofimático y coteja los **46.868 estados** de Arbol0 y Arbol15: spots, europea, bermuda, americana, mejorada, política, masa viva y absorbida, delta/cash y continuación BS; comprueba además las 14 fechas agregadas de probabilidades y todos los auxiliares numéricos de E2/E3. Máxima diferencia entre valores de nodo y Python: **6,14e−12**; tolerancia 1e−9. Los residuos locales/de presupuesto de la hoja son<1e−10. Hay más de 900.000 celdas no vacías en E1. Se escanean todos los libros para detectar errores de fórmula: ninguno. Precios E2 y E3 coinciden con Python a menos de 1e−7, con errores observados menores de 5e−12. Evidencia exacta en `resultados/hojas_verificadas.json`.
 
 El recálculo ejecuta fórmulas equivalentes en otro motor; es control de implementación, no una validación financiera independiente. La independencia financiera procede de convolución/distribución, cuadratura, réplica, límites y revisión externa al implementador.
 
@@ -50,4 +55,4 @@ Otro agente, con contexto inicial limpio y lectura de fuentes, revisó matemáti
 - Los nuevos XLSX sí se han recalculado; los libros de clase raw siguen intactos y sin recalcular ni ejecutar VBA.
 - Los nombres del grupo y la entrega/defensa personal siguen a cargo del alumno. El extra independiente de cesta sigue opcional pendiente.
 
-Versiones del sistema usadas: Python3.12.14; Pandoc3.1.11.1; LibreOfficeDev26.8.0.0.alpha0 (recalculo documentado, sin errores en los casos cotejados); XeTeX de TeXLive2025/dev. Las versiones Python se fijan en requirements.txt.
+Versiones del sistema usadas: Python 3.12.14; Pandoc 3.1.11.1; LibreOfficeDev 26.8.0.0.alpha0 (recalculo documentado, sin errores en los casos cotejados); XeTeX de TeX Live 2025/dev. Las versiones Python se fijan en requirements.txt.

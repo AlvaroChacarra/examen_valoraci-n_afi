@@ -1,0 +1,86 @@
+{
+  "Ejercicio1.xlsx": {
+    "sha256": "3637fbaf6c8f08cc19ccb63489006af3971bb3f0b7f4d002a000ec8e8f5d765b",
+    "matches_commit": true,
+    "formulas": 591018,
+    "missing_numeric_formula_cache": 0,
+    "errors": [],
+    "external_or_vba": [],
+    "examples": [
+      [
+        "xl/worksheets/sheet5.xml",
+        "B2",
+        "Entradas!B9/Entradas!B10",
+        "0.0410958904109589"
+      ],
+      [
+        "xl/worksheets/sheet5.xml",
+        "C2",
+        "B3-B2",
+        "0.0422374429223744"
+      ],
+      [
+        "xl/worksheets/sheet5.xml",
+        "D2",
+        "Entradas!B6",
+        "0.375"
+      ]
+    ]
+  },
+  "Ejercicio3.xlsx": {
+    "sha256": "2ef6d3fd726458b793b1c50f5ae9dff3f9c475cdfa549857a4c2ab7f3995553f",
+    "matches_commit": true,
+    "formulas": 19,
+    "missing_numeric_formula_cache": 0,
+    "errors": [],
+    "external_or_vba": [],
+    "examples": [
+      [
+        "xl/worksheets/sheet2.xml",
+        "B13",
+        "B6-B7-B10*B8*B9",
+        "0"
+      ],
+      [
+        "xl/worksheets/sheet2.xml",
+        "B14",
+        "B9",
+        "0"
+      ],
+      [
+        "xl/worksheets/sheet2.xml",
+        "B15",
+        "SQRT(B8^2+B9^2+2*B10*B8*B9)",
+        "0"
+      ]
+    ]
+  },
+  "Ejercicio2.xlsx": {
+    "sha256": "21681a455df0a76b173894b5e83fdd93dc554ce7e1a431f5c78b4d4ef973b5d3",
+    "matches_commit": true,
+    "formulas": 14,
+    "missing_numeric_formula_cache": 0,
+    "errors": [],
+    "external_or_vba": [],
+    "examples": [
+      [
+        "xl/worksheets/sheet2.xml",
+        "B9",
+        "B6^2*B4",
+        "0"
+      ],
+      [
+        "xl/worksheets/sheet2.xml",
+        "B10",
+        "SQRT(B9)",
+        "0"
+      ],
+      [
+        "xl/worksheets/sheet2.xml",
+        "B11",
+        "IF(B10=0,0,(B2-B3)/B10)",
+        "0"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/examen_valoraci-n_afi/soluciones/src/verifica_hojas.py", line 105, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/examen_valoraci-n_afi/soluciones/src/verifica_hojas.py", line 103, in main
+    else:out=verify(args.folder)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/examen_valoraci-n_afi/soluciones/src/verifica_hojas.py", line 35, in verify
+    assert abs(row[15]-mass[ix])<1e-12,(suffix,j,ix,'masa viva',row[15],mass[ix])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('0', 1, (0, 0, 0), 'masa viva', 0, np.float64(0.5))

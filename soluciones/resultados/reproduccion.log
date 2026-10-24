@@ -174,7 +174,7 @@ test_quadrature_and_parities (test_ejercicio3.TestQuanto.test_quadrature_and_par
 test_simulation_martingales (test_ejercicio3.TestQuanto.test_simulation_martingales) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 1.033s
+Ran 11 tests in 0.895s
 
 OK
 Tres libros generados con fórmulas
@@ -185,7 +185,7 @@ convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio3.xlsx as a C
   "Ejercicio1.xlsx": {
     "nonempty_cells": 907120,
     "formula_errors": [],
-    "max_node_error": 5.002220859751105e-12,
+    "max_node_error": 6.139089236967266e-12,
     "states_verified": 46868,
     "probabilities_verified": 14
   },
@@ -196,7 +196,9 @@ convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio3.xlsx as a C
       "fra": 1.1368683772161603e-13,
       "caplet": 4.547473508864641e-12,
       "floorlet": 4.547473508864641e-13
-    }
+    },
+    "auxiliary_cells_verified": 14,
+    "max_auxiliary_error": 4.547473508864641e-12
   },
   "Ejercicio3.xlsx": {
     "nonempty_cells": 121,
@@ -208,6 +210,106 @@ convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio3.xlsx as a C
       "call_quanto": 0.0,
       "put": 3.552713678800501e-14,
       "put_quanto": 3.907985046680551e-14
-    }
+    },
+    "auxiliary_cells_verified": 19,
+    "max_auxiliary_error": 4.263256414560601e-13
   }
+}
+{
+  "pages": [
+    {
+      "page": 1,
+      "characters": 2161,
+      "images": 0
+    },
+    {
+      "page": 2,
+      "characters": 2666,
+      "images": 0
+    },
+    {
+      "page": 3,
+      "characters": 1956,
+      "images": 0
+    },
+    {
+      "page": 4,
+      "characters": 2213,
+      "images": 0
+    },
+    {
+      "page": 5,
+      "characters": 2419,
+      "images": 0
+    },
+    {
+      "page": 6,
+      "characters": 1524,
+      "images": 1
+    },
+    {
+      "page": 7,
+      "characters": 1506,
+      "images": 1
+    },
+    {
+      "page": 8,
+      "characters": 1637,
+      "images": 0
+    },
+    {
+      "page": 9,
+      "characters": 1153,
+      "images": 0
+    },
+    {
+      "page": 10,
+      "characters": 1380,
+      "images": 0
+    },
+    {
+      "page": 11,
+      "characters": 2547,
+      "images": 0
+    },
+    {
+      "page": 12,
+      "characters": 1824,
+      "images": 0
+    },
+    {
+      "page": 13,
+      "characters": 1284,
+      "images": 0
+    },
+    {
+      "page": 14,
+      "characters": 1301,
+      "images": 0
+    },
+    {
+      "page": 15,
+      "characters": 1689,
+      "images": 0
+    },
+    {
+      "page": 16,
+      "characters": 1273,
+      "images": 0
+    },
+    {
+      "page": 17,
+      "characters": 2416,
+      "images": 0
+    },
+    {
+      "page": 18,
+      "characters": 1358,
+      "images": 0
+    }
+  ],
+  "blocks_outside_safe_area": [],
+  "pdf_pages": 18,
+  "pdf_bytes": 224743,
+  "note": "Renders para revisi\u00f3n visual en tmp/revision_pdf; la detecci\u00f3n de m\u00e1rgenes no certifica el dise\u00f1o."
 }
