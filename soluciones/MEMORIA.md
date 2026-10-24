@@ -281,3 +281,220 @@ La integración adaptativa independiente evalúa directamente $g(f+s z)(1+\delta
 Una normal no degenerada asigna probabilidad positiva a $F_T<-1/\delta$. Pero un bono estrictamente positivo exige $1+\delta F_T=1/P(T,U)>0$. Los dos supuestos no definen globalmente un modelo exacto coherente de bonos positivos. Incluso la densidad formal de cambio de medida puede resultar negativa en esa cola. La inconsistencia afecta al modelo global, no al cálculo de los momentos solicitados.
 
 Resolvemos la **aproximación normal docente sin truncar su distribución**, como pide el encargo. En el ejemplo la frontera está a más de 140 desviaciones típicas; esto explica su insignificancia numérica allí, pero no elimina la incompatibilidad matemática. Para otras escalas la cola podría ser material e incluso originar precios formales negativos de flujos no negativos; no habría que interpretarlos como precios de arbitraje de un modelo global válido. No se introduce silenciosamente una distribución truncada o desplazada, pues alteraría el ejercicio.
+
+# Ejercicio 3. Acción USD, valoración EUR
+
+## Contratos y correspondencia con la presentación
+
+Se completa PPT-001 diap.1–25 en este formato, autorizado por PDF-002 p.4. Las diap.1–10 fijan el marco; las ecuaciones (1)–(10) se desarrollan a continuación. No hay inputs numéricos obligatorios. Las unidades son $S_t$ USD/acción y $X_t=FX_t$ EUR/USD. Una acción es la unidad de subyacente. $r_d=r_{EUR}$, $r_f=r_{USD}$ y $q$ son tasas continuas constantes, $\sigma_S,\sigma_X$ volatilidades relativas anuales y $\rho=\rho_{FX,S}$ la correlación instantánea de los brownianos **observables**.
+
+|Contrato (diap.4–8)|Pago en EUR en $T$|
+|---|---|
+|Forward usual|$X_T(S_T-K)$|
+|Forward quanto|$\lambda(S_T-K)$|
+|Call usual|$X_T(S_T-K)^+$|
+|Call quanto|$\lambda(S_T-K)^+$|
+
+La presentación toma implícitamente $\lambda=1$ EUR/USD fijo. Introducirlo hace explícita la conversión contractual; en las fórmulas siguientes se mantiene para seguir las unidades, y el código usa 1. $K$ está en USD por acción. Un pago quanto ya convertido **no se multiplica por FX terminal**. El numerario doméstico es $\beta_d(t)=e^{r_dt}$ y la medida de valoración es $Q^d$. $\beta_f(t)=e^{r_ft}$ está en USD por dólar inicialmente invertido. Los dividendos se reinvierten: $e^{qt}S_t$ es la inversión de retorno total, no el spot exdividendo.
+
+## Dinámicas y soluciones de M y N: (1)–(2), diap.10–11
+
+Las tres inversiones básicas descontadas son $1$, $M_t=e^{(r_f-r_d)t}X_t$ y $N_t=e^{(q-r_d)t}S_tX_t$. Bajo $Q^d$ han de ser martingalas. El marco Black postula
+
+$$dM_t=\sigma_M M_t\,dU_t,\qquad
+dN_t=\sigma_N N_t\,dV_t,\qquad
+d\langle U,V\rangle_t=\rho_{MN}dt.\tag{1}$$
+
+$U,V$ son brownianos bajo $Q^d$; $\rho_{MN}$ todavía no es la correlación observable $\rho$. Para $L=\log M$, Itô con $L_M=1/M$, $L_{MM}=-1/M^2$ da $dL=-\sigma_M^2dt/2+\sigma_MdU$. Integrando, y análogamente para $N$:
+
+$$M_t=X_0e^{-\sigma_M^2t/2+\sigma_MU_t},\qquad
+N_t=S_0X_0e^{-\sigma_N^2t/2+\sigma_NV_t}.\tag{2}$$
+
+A un horizonte dado, $U_t/\sqrt t,V_t/\sqrt t$ son normales estándar correladas por $\rho_{MN}$. La identidad $E[e^{aZ}]=e^{a^2/2}$ prueba $E[M_t]=X_0$, $E[N_t]=S_0X_0$. No son únicamente martingalas locales: la volatilidad constante satisface las condiciones de integrabilidad de estas exponenciales.
+
+## Diccionario y parámetros: (3), diap.12–13
+
+Despejando las definiciones:
+
+$$X_t=e^{(r_d-r_f)t}M_t,\qquad
+S_t=e^{(r_f-q)t}\frac{N_t}{M_t}.\tag{3}$$
+
+El diccionario inverso es $M_t=e^{(r_f-r_d)t}X_t$, $N_t=e^{(q-r_d)t}S_tX_t$. Así pueden simularse primero las martingalas o los observables; debe transformarse también su covariación. Como la parte aleatoria de $dS/S$ es $\sigma_NdV-\sigma_MdU$,
+
+$$\sigma_X=\sigma_M,\qquad
+\sigma_S^2=\sigma_N^2+\sigma_M^2-2\rho_{MN}\sigma_M\sigma_N,$$
+
+$$\rho\sigma_X\sigma_S=\rho_{MN}\sigma_M\sigma_N-\sigma_M^2.$$
+
+En términos de los datos observables:
+
+$$\boxed{\sigma_M=\sigma_X,\quad
+\sigma_N=\sqrt{\sigma_X^2+\sigma_S^2+2\rho\sigma_X\sigma_S},\quad
+\rho_{MN}=\frac{\sigma_X+\rho\sigma_S}{\sigma_N}.}$$
+
+Se puede tomar $U=W$ y $dV=(\sigma_XdW+\sigma_SdZ)/\sigma_N$, donde $d\langle W,Z\rangle=\rho dt$. El numerador de $\rho_{MN}$ procede de la covarianza, no de una identificación de correlaciones. La fórmula respeta $|\rho_{MN}|\le1$ pues la diferencia entre denominador al cuadrado y numerador al cuadrado es $\sigma_S^2(1-\rho^2)\ge0$.
+
+Si $\sigma_N=0$, $N$ es determinista y no se define su browniano ni su correlación; si $\sigma_X=0$, $M$ es constante y su correlación tampoco es identificable. Se usan las SDE vectoriales antes de dividir. El código devuelve `None` para la correlación degenerada. Con $\rho=\pm1$ la normal conjunta es singular pero las fórmulas por continuidad siguen siendo válidas.
+
+## Itô completo y signo quanto: (4)–(5), diap.14–16
+
+Postulamos $dX/X=\mu_Xdt+\sigma_XdW$ y $dS/S=\mu_Sdt+\sigma_SdZ$. Para $f(t,x)=e^{(r_f-r_d)t}x$, las derivadas relevantes son $f_t=(r_f-r_d)f$, $f_x=e^{(r_f-r_d)t}$, $f_{xx}=0$. Por tanto
+
+$$\frac{dM}{M}=(r_f-r_d+\mu_X)dt+\sigma_XdW.$$
+
+La deriva nula impone
+
+$$\boxed{\mu_X=r_d-r_f.}\tag{4}$$
+
+Para $g(s,x)=sx$, $g_s=x$, $g_x=s$, $g_{sx}=1$, $g_{ss}=g_{xx}=0$. La fórmula bidimensional contiene $\tfrac12\cdot2g_{sx}d\langle S,X\rangle$, de donde
+
+$$d(SX)=X\,dS+S\,dX+d\langle S,X\rangle,$$
+
+$$d\langle S,X\rangle=\rho\sigma_S\sigma_XSX\,dt,$$
+
+$$\frac{d(SX)}{SX}=(\mu_S+\mu_X+\rho\sigma_S\sigma_X)dt
++\sigma_SdZ+\sigma_XdW.$$
+
+El factor determinista $e^{(q-r_d)t}$ no tiene covariación. Así,
+
+$$\frac{dN}{N}=(q-r_d+\mu_S+\mu_X+\rho\sigma_S\sigma_X)dt
++\sigma_SdZ+\sigma_XdW.$$
+
+Al sustituir (4) y anular la deriva:
+
+$$\boxed{\mu_S=r_f-q-\rho\sigma_S\sigma_X.}\tag{5}$$
+
+Si se omitiera el término cruzado, $N$ tendría una deriva distinta de cero. Con correlación positiva, la acción tiende a subir junto al dólar expresado en EUR; para mantener el retorno total en EUR compatible con el tipo doméstico, su deriva **bajo Q EUR** debe reducirse. Ésta fija el signo negativo del ajuste quanto para esta convención de FX.
+
+Se puede comprobar desde el cociente (3): para $h(m,n)=n/m$, $h_m=-n/m^2$, $h_n=1/m$, $h_{mm}=2n/m^3$, $h_{mn}=-1/m^2$, $h_{nn}=0$. Entonces
+
+$$\frac{d(N/M)}{N/M}=(\sigma_M^2-\rho_{MN}\sigma_M\sigma_N)dt
++\sigma_NdV-\sigma_MdU.$$
+
+Su deriva, tras multiplicar por $e^{(r_f-q)t}$, vuelve a ser $r_f-q-\rho\sigma_X\sigma_S$. Este segundo recorrido contrasta todos los términos de Itô y el diccionario.
+
+## Distribución conjunta terminal: (6), diap.17
+
+Sean $Z_X,Z_S$ normales estándar con correlación $\rho$. En $T$:
+
+$$X_T=X_0\exp\{(r_d-r_f-\tfrac12\sigma_X^2)T+\sigma_X\sqrt T Z_X\},$$
+
+$$S_T=S_0\exp\{(r_f-q-\rho\sigma_S\sigma_X-\tfrac12\sigma_S^2)T
++\sigma_S\sqrt T Z_S\}.\tag{6}$$
+
+El vector de logaritmos tiene medias iguales a los términos deterministas escritos (sumando $\log X_0,\log S_0$), y matriz de covarianza
+
+$$T\begin{pmatrix}\sigma_X^2&\rho\sigma_X\sigma_S\\
+\rho\sigma_X\sigma_S&\sigma_S^2\end{pmatrix}.$$
+
+Por tanto $E[X_T]=X_0e^{(r_d-r_f)T}$, $E[S_T]=S_0e^{\mu_ST}$ y, al incluir la covarianza en el producto,
+
+$$E[S_TX_T]=S_0X_0e^{(r_d-q)T}.$$
+
+La correlación de **niveles** lognormales no es $\rho$; si ambas volatilidades son positivas es
+
+$$Corr(X_T,S_T)=\frac{e^{\rho\sigma_X\sigma_ST}-1}
+{\sqrt{(e^{\sigma_X^2T}-1)(e^{\sigma_S^2T}-1)}}.$$
+
+La simulación usa las normales/logretornos correlados; no fuerza esa correlación sobre los niveles.
+
+## Forward usual y réplica estática: (7), diap.18–20
+
+Valorando su flujo EUR y usando las martingalas,
+
+$$V_0^F=e^{-r_dT}E[X_TS_T-KX_T]
+=e^{-qT}E[N_T]-Ke^{-r_fT}E[M_T],$$
+
+$$\boxed{V_0^F=X_0(S_0e^{-qT}-Ke^{-r_fT}).}\tag{7}$$
+
+La réplica independiente compra $e^{-qT}$ acciones hoy y reinvierte sus dividendos: en $T$ dispone de una acción. Se toma prestado $Ke^{-r_fT}$ USD, que obliga a devolver $K$ USD en $T$. La liquidación entrega $S_T-K$ USD y su conversión es exactamente $X_T(S_T-K)$ EUR. El coste inicial en USD es $S_0e^{-qT}-Ke^{-r_fT}$; para un inversor EUR se multiplica **todo** por $X_0$. La posición de reinversión evoluciona según una regla determinista y no requiere una cobertura estocástica del derivado; es la réplica estática con activo de retorno total de la plantilla.
+
+El strike de coste cero es $S_0e^{(r_f-q)T}$, independiente de $r_d$, de la correlación y de la volatilidad FX. No se requiere asumir el modelo Black para esta réplica (sí financiación y dividendos según los supuestos).
+
+## Forward quanto: (8), diap.21–22
+
+Aquí el flujo ya está fijado en EUR mediante $\lambda$; no se puede usar la réplica anterior ni multiplicar por $X_T$:
+
+$$\boxed{V_0^{FQ}=\lambda e^{-r_dT}
+[S_0e^{(r_f-q-\rho\sigma_S\sigma_X)T}-K].}\tag{8}$$
+
+Su strike de coste cero es $F_Q=S_0e^{\mu_ST}$. Se diferencia del usual porque se ha eliminado la conversión aleatoria del payoff. Para $\rho\sigma_X\sigma_S=0$ desaparece el ajuste de deriva, aunque los contratos siguen teniendo distinta moneda de pago y descuento. Cambiar $X_0$ no cambia un contrato quanto con conversión fija.
+
+## Call quanto: (9), diap.23–24
+
+Para $\sigma_S\sqrt T=w>0$, escribimos $S_T=S_0e^{(\mu_S-\sigma_S^2/2)T+wZ}$. El umbral de ejercicio es
+
+$$Z>h=\frac{\log(K/S_0)-(\mu_S-\sigma_S^2/2)T}{w}.$$
+
+La probabilidad es $\Phi(-h)$ y, completando el cuadrado $e^{wz}\phi(z)=e^{w^2/2}\phi(z-w)$,
+
+$$E[S_T1_{S_T>K}]=S_0e^{\mu_ST}\Phi(w-h)=F_Q\Phi(d_1^Q),$$
+
+$$d_1^Q=\frac{\log(F_Q/K)}{w}+\frac w2,\qquad d_2^Q=d_1^Q-w=-h.$$
+
+Restando el strike por la probabilidad y descontando en EUR:
+
+$$\boxed{V_0^{CQ}=\lambda e^{-r_dT}
+[F_Q\Phi(d_1^Q)-K\Phi(d_2^Q)].}\tag{9}$$
+
+La put quanto análoga es $\lambda e^{-r_dT}[K\Phi(-d_2^Q)-F_Q\Phi(-d_1^Q)]$ y satisface $CQ-PQ=FQ$. Para $w=0$ se toma el límite $\lambda e^{-r_dT}(F_Q-K)^+$; para $T=0$ es el payoff inmediato. No se intenta dividir por una volatilidad nula.
+
+## Call usual dentro del marco EUR: (10), diap.25
+
+Hay que calcular $e^{-r_dT}E[X_T(S_T-K)^+]$, no la esperanza quanto. El evento $S_T>K$ sigue usando el umbral $h$ anterior; la conversión FX **inclina** la distribución relevante.
+
+La identidad para normales estándar correladas $Y,Z$ es
+
+$$E[e^{aY+bZ}1_{Z>h}]
+=e^{(a^2+b^2+2\rho ab)/2}\Phi(b+\rho a-h).$$
+
+Para derivarla, se escribe $Y=\rho Z+\sqrt{1-\rho^2}\epsilon$, se integra primero $\epsilon$ y se completa el cuadrado en $Z$. Este paso usa explícitamente la correlación observable.
+
+Aplicándola a $X_T1_{S_T>K}$ con $a=\sigma_X\sqrt T,b=0$, y a $X_TS_T1_{S_T>K}$ con $b=\sigma_S\sqrt T$, se obtiene
+
+$$E[X_T1_{S_T>K}]=X_0e^{(r_d-r_f)T}\Phi(d_2),$$
+
+$$E[X_TS_T1_{S_T>K}]=X_0S_0e^{(r_d-q)T}\Phi(d_1),$$
+
+$$d_2=\rho\sigma_X\sqrt T-h
+=\frac{\log(S_0/K)+(r_f-q-\sigma_S^2/2)T}{\sigma_S\sqrt T},\qquad
+ d_1=d_2+\sigma_S\sqrt T.$$
+
+El ajuste quanto del umbral se cancela con la inclinación por FX. La call usual vale
+
+$$\boxed{V_0^C=X_0[S_0e^{-qT}\Phi(d_1)-Ke^{-r_fT}\Phi(d_2)],}\tag{10}$$
+
+$$d_{1,2}=\frac{\log\!\left(\frac{S_0e^{-qT}}{Ke^{-r_fT}}\right)}{\sigma_S\sqrt T}
+\ \pm\ \frac12\sigma_S\sqrt T.$$
+
+Se recupera la call Black–Scholes en USD multiplicada por el spot FX completo. Es coherente con financiar y replicar la call en USD y convertir el coste inicial a EUR. La put usual satisface $C-P=F$ con los mismos pagos convertidos a FX terminal.
+
+**Correcciones de la plantilla, contrastadas visualmente:** en diap.17 se debe leer el horizonte $T$ en las variables terminales; en diap.19 y 21–23, los denominadores de descuento del flujo terminal son $\beta_d(T)$, donde aparece $t$. Los paréntesis y corchetes de diap.8 y 18 sí existen en el original; su pérdida en la extracción no es un fallo docente. En diap.25 el $d_\pm$ impreso contiene $Ke^{+r_fT}$ en el cociente: debe ser $Ke^{-r_fT}$, o equivalentemente $\log(S_0/K)+(r_f-q)T$. El valor impreso de la call usa correctamente descuento $e^{-r_fT}$. Conservar ambos signos impresos daría una expresión internamente inconsistente: la derivación, la réplica y la paridad justifican la corrección sin modificar el contrato.
+
+## Verificación numérica y límites
+
+**Ejemplo exclusivamente ilustrativo**, distinto del extra de cesta: $S_0=100$ USD, $K=105$ USD, $X_0=0{,}9$ EUR/USD; $r_d=3\%$, $r_f=2\%$, $q=1\%$, $\sigma_S=25\%$, $\sigma_X=12\%$, $\rho=0{,}4$, $T=2$ y $\lambda=1$. Se obtiene $\mu_S=-0{,}2\%$, $\sigma_N=31{,}764760\%$ y $\rho_{MN}=0{,}6925914$, claramente distinto de 0,4.
+
+|Contrato|Fórmula (EUR)|Monte Carlo|IC 95% (EUR)|
+|---|---:|---:|---|
+|Forward usual|−2,576721|−2,600919|[−2,666204; −2,535634]|
+|Forward quanto|−5,084776|−5,108684|[−5,175743; −5,041625]|
+|Call usual|11,311997|11,300194|[11,253306; 11,347082]|
+|Call quanto|11,124891|11,117161|[11,073340; 11,160982]|
+
+Se simulan 1.000.000 de pares normales iid bajo $Q^d$, PCG64, semilla 20261025. Los intervalos son media $\pm1{,}959964$ errores estándar muestrales (aproximación CLT), sin tratarlos como cotas deterministas. Todas las fórmulas caen en sus intervalos marginales. Las medias de $M_T$ y $N_T$ son 0,9000157 y 89,976929, con intervalos [0,8997144; 0,9003170] y [89,893619; 90,060239], que contienen $M_0=0{,}9$ y $N_0=90$. Las correlaciones simuladas de los logaritmos son 0,400296 para observables y 0,692578 para martingalas.
+
+Como contraste adicional independiente, `integrate` integra directamente los flujos condicionando en $Z_S=z$. La esperanza de FX que queda dentro es
+
+$$E[X_T\mid Z_S=z]=X_0\exp\{(r_d-r_f-\tfrac12\rho^2\sigma_X^2)T
++\rho\sigma_X\sqrt T z\}.$$
+
+Multiplica el payoff usual y se integra por cuadratura adaptativa, separando en su strike. El quanto omite esa conversión. La integración no usa los $d_1,d_2$ de las fórmulas de precios; coincide a más de nueve decimales en el ejemplo y al variar $\rho$ entre −1 y 1. El dominio numérico [-12,12] deja colas despreciables en los ejemplos probados; no se presenta como un integrador universal para volatilidades arbitrariamente grandes.
+
+Se comprueban paridades, $T=0$, $\sigma_S=0$, $\sigma_X=0$ y el caso degenerado $\sigma_N=0$. Con correlación positiva creciente, el forward quanto disminuye; las condiciones de martingala fijan ese signo. La call usual no cambia al variar $r_d$, $\rho$ o $\sigma_X$ manteniendo los datos USD y el spot FX: es un control especialmente sensible a aplicar incorrectamente el ajuste quanto al contrato usual.
+
+# Entrega, defensa y reproducibilidad
+
+El PDF y las hojas se generan desde esta memoria y el código con los comandos de `README.md`. `VALIDACION.md` documenta las pruebas ejecutadas y sus límites; `AUDITORIA.md` identifica la revisión concreta y qué contrastar de forma independiente. `DEFENSA.md` reúne preguntas razonadas y el proceso de entrega de PDF-001. La revisión del trabajo no sustituye la comprensión individual ni el ensayo personal de la defensa.
+
+Los nombres reales de los 4–6 integrantes deben completarse antes de la entrega académica. La ventana es del 1 al 8 de noviembre de 2026 a las 23:59. Esta ejecución no sube archivos al campus, no graba al alumno ni envía correos. El extra independiente de cesta sigue opcional pendiente.
