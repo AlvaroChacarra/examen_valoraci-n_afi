@@ -1,0 +1,1376 @@
+{
+  "schema_version": 1,
+  "ingested_on": "2026-10-24",
+  "archives": [
+    {
+      "chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip"
+      ],
+      "bytes": 13428528,
+      "sha256": "dab4dd60524ec91b32959bd9622e9b36c6cf4a7dca3e6c8cc5a1437f307f8ac4"
+    },
+    {
+      "chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Ejercicios_Valoracion_Fundamentos_1.zip"
+      ],
+      "bytes": 247080,
+      "sha256": "6c94b017312644209f2af12cb40d32d02c5834993f00fb48cd37ef19d2af7de5"
+    },
+    {
+      "chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Sesion_II.zip"
+      ],
+      "bytes": 173120,
+      "sha256": "878367329c118632b0d77751059672d547d814f0ed19f7cf58054f8a0d462959"
+    },
+    {
+      "chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "SesionIII.zip"
+      ],
+      "bytes": 193071,
+      "sha256": "9fe517b8ced989a06e284c7ebed3870cb0717b377f15f2e79de2d7bb65d0ef90"
+    },
+    {
+      "chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip"
+      ],
+      "bytes": 25523129,
+      "sha256": "38da9f0a1bc386539fcbd6836cb0fc969251e6f4ea2641a7068c23435a7a65ec"
+    },
+    {
+      "chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity. Soluciones.zip"
+      ],
+      "bytes": 6674754,
+      "sha256": "2fd0ecf7b14af66c23d369b983387204148e4f3265179004c474f205bf677c9d"
+    },
+    {
+      "chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity.zip"
+      ],
+      "bytes": 1194875,
+      "sha256": "aa70ae8a4aae8f1d6ec6411617eee7c95714eef9a7108df5b7900d7d2bcc6c11"
+    },
+    {
+      "chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip"
+      ],
+      "bytes": 8245701,
+      "sha256": "b40ce86c6dd604807cc2652005b9580b7939219eeee034da49f5b34ca5153944"
+    },
+    {
+      "chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip"
+      ],
+      "bytes": 1058140,
+      "sha256": "61575f0dcb9ca884fcef2227d319083b1d919b36dc8337d8a20b68fd646cfc0e"
+    },
+    {
+      "chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración. Marco Black. Soluciones.zip"
+      ],
+      "bytes": 6025082,
+      "sha256": "c3cd689b0f3b9dcbfbeb80aa615eeb31d560afbd51afb066866753e47ac411a2"
+    },
+    {
+      "chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip"
+      ],
+      "bytes": 2321958,
+      "sha256": "ad3140f8bc810ef5145bab69424d813928f5e8c9941527e4af091d41af07cc84"
+    }
+  ],
+  "sources": [
+    {
+      "path": "raw/encargo/instrucciones-para-la-entrega-del-trabajo.pdf",
+      "original_name": "Instrucciones para la entrega del trabajo.pdf",
+      "archive_chain": [
+        "Instrucciones para la entrega del trabajo.pdf"
+      ],
+      "group": "encargo",
+      "bytes": 112207,
+      "sha256": "6b0f6571225864325895576f5287b1bf03c052e04f3287058ac2c3e2394b0139",
+      "extension": ".pdf",
+      "id": "PDF-001",
+      "extraction": "knowledge-base/extracciones/pdf-001-instrucciones-para-la-entrega-del-trabajo.md",
+      "dossier": "knowledge-base/fuentes/pdf-001-instrucciones-para-la-entrega-del-trabajo.md",
+      "pages": 2,
+      "low_text_pages": []
+    },
+    {
+      "path": "raw/encargo/valoracion-mefc-2026.pdf",
+      "original_name": "Valoracion MEFC 2026.pdf",
+      "archive_chain": [
+        "Valoracion MEFC 2026.pdf"
+      ],
+      "group": "encargo",
+      "bytes": 236333,
+      "sha256": "1366027affc9a0a4ec236c96418921641ef55a7489b69f7b951561275a620bdb",
+      "extension": ".pdf",
+      "id": "PDF-002",
+      "extraction": "knowledge-base/extracciones/pdf-002-valoracion-mefc-2026.md",
+      "dossier": "knowledge-base/fuentes/pdf-002-valoracion-mefc-2026.md",
+      "pages": 4,
+      "low_text_pages": []
+    },
+    {
+      "path": "raw/fundamentos/mfc-26-valoracion-arboles-teoria.pdf",
+      "original_name": "MFC-26-valoracion-arboles_Teoria.pdf",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "MFC-26-valoracion-arboles_Teoria.pdf"
+      ],
+      "group": "fundamentos",
+      "bytes": 665347,
+      "sha256": "ee31dff2be768db07c304834dec06717af2be84e3c7126914a18855e56234ef4",
+      "extension": ".pdf",
+      "id": "PDF-003",
+      "extraction": "knowledge-base/extracciones/pdf-003-mfc-26-valoracion-arboles-teoria.md",
+      "dossier": "knowledge-base/fuentes/pdf-003-mfc-26-valoracion-arboles-teoria.md",
+      "pages": 102,
+      "low_text_pages": [
+        102
+      ]
+    },
+    {
+      "path": "raw/fundamentos/mfc-26-valoracionfundamentos-teoria.pdf",
+      "original_name": "MFC_26_ValoracionFundamentos_Teoría.pdf",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "MFC_26_ValoracionFundamentos_Teoría.pdf"
+      ],
+      "group": "fundamentos",
+      "bytes": 898128,
+      "sha256": "928b526073ad39e25327e6a30120f3efdbe1c60709e0bdca04fc6eda6d541c89",
+      "extension": ".pdf",
+      "id": "PDF-004",
+      "extraction": "knowledge-base/extracciones/pdf-004-mfc-26-valoracionfundamentos-teoria.md",
+      "dossier": "knowledge-base/fuentes/pdf-004-mfc-26-valoracionfundamentos-teoria.md",
+      "pages": 158,
+      "low_text_pages": [
+        158
+      ]
+    },
+    {
+      "path": "raw/fundamentos/sesion-i-2026.pdf",
+      "original_name": "Sesion_I_2026.pdf",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Sesion_I_2026.pdf"
+      ],
+      "group": "fundamentos",
+      "bytes": 7202940,
+      "sha256": "92982aa8f31c79e14ce0068de70fdc7f47daef38db7c0d07315049c866262a34",
+      "extension": ".pdf",
+      "id": "PDF-005",
+      "extraction": "knowledge-base/extracciones/pdf-005-sesion-i-2026.md",
+      "dossier": "knowledge-base/fuentes/pdf-005-sesion-i-2026.md",
+      "pages": 138,
+      "low_text_pages": [
+        3,
+        17,
+        18,
+        19,
+        22,
+        37,
+        40,
+        43,
+        44,
+        45,
+        46,
+        47,
+        49,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138
+      ]
+    },
+    {
+      "path": "raw/fundamentos/sesion-ii-2026.pdf",
+      "original_name": "Sesion_II_2026.pdf",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Sesion_II_2026.pdf"
+      ],
+      "group": "fundamentos",
+      "bytes": 4935237,
+      "sha256": "5ffb90e68a69a5b83ac5ba7fa639da3c48159b825427644f22086753ea523397",
+      "extension": ".pdf",
+      "id": "PDF-006",
+      "extraction": "knowledge-base/extracciones/pdf-006-sesion-ii-2026.md",
+      "dossier": "knowledge-base/fuentes/pdf-006-sesion-ii-2026.md",
+      "pages": 74,
+      "low_text_pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        54,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ]
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity/1-valoracion-marco-black-equity.pdf",
+      "original_name": "1.Valoración. Marco Black Equity.pdf",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity.zip",
+        "1.Valoración. Marco Black Equity.pdf"
+      ],
+      "group": "marco-black",
+      "bytes": 945075,
+      "sha256": "64bb0c4fc8e4b5ea75da1c0b2fd9625242cdacf0ef9de97a81e3643dd7bed97b",
+      "extension": ".pdf",
+      "id": "PDF-007",
+      "extraction": "knowledge-base/extracciones/pdf-007-1-valoracion-marco-black-equity.md",
+      "dossier": "knowledge-base/fuentes/pdf-007-1-valoracion-marco-black-equity.md",
+      "pages": 46,
+      "low_text_pages": [
+        3,
+        11,
+        46
+      ]
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/2-valoracion-marco-black-tipos.pdf",
+      "original_name": "2.Valoración. Marco Black Tipos.pdf",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2.Valoración. Marco Black Tipos.pdf"
+      ],
+      "group": "marco-black",
+      "bytes": 915502,
+      "sha256": "db75579a412c6f87e759df3cf829aaf5be4c2d7c2a0ade8ce3f908c4a4ccf2f1",
+      "extension": ".pdf",
+      "id": "PDF-008",
+      "extraction": "knowledge-base/extracciones/pdf-008-2-valoracion-marco-black-tipos.md",
+      "dossier": "knowledge-base/fuentes/pdf-008-2-valoracion-marco-black-tipos.md",
+      "pages": 33,
+      "low_text_pages": [
+        3,
+        4,
+        20,
+        33
+      ]
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/3-valoracion-anexo-i-nuevo-marco-tipos.pdf",
+      "original_name": "3.Valoración. Anexo I. Nuevo Marco Tipos.pdf",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "3.Valoración. Anexo I. Nuevo Marco Tipos.pdf"
+      ],
+      "group": "marco-black",
+      "bytes": 1313478,
+      "sha256": "25999f5dad0f46d42d35bb7ff4e41c61297bcd30744c3c3f98d6fc91fec1020a",
+      "extension": ".pdf",
+      "id": "PDF-009",
+      "extraction": "knowledge-base/extracciones/pdf-009-3-valoracion-anexo-i-nuevo-marco-tipos.md",
+      "dossier": "knowledge-base/fuentes/pdf-009-3-valoracion-anexo-i-nuevo-marco-tipos.md",
+      "pages": 41,
+      "low_text_pages": [
+        3,
+        4,
+        9,
+        29,
+        41
+      ]
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/4-valoracion-anexo-ii-marco-black-tipo-de-cambio.pdf",
+      "original_name": "4.Valoración. Anexo II. Marco Black Tipo de Cambio.pdf",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "4.Valoración. Anexo II. Marco Black Tipo de Cambio.pdf"
+      ],
+      "group": "marco-black",
+      "bytes": 865815,
+      "sha256": "e0b3df0f0d90077ca87632416e90f37d437a63c57d2409788442da0424c05b74",
+      "extension": ".pdf",
+      "id": "PDF-010",
+      "extraction": "knowledge-base/extracciones/pdf-010-4-valoracion-anexo-ii-marco-black-tipo-de-cambio.md",
+      "dossier": "knowledge-base/fuentes/pdf-010-4-valoracion-anexo-ii-marco-black-tipo-de-cambio.md",
+      "pages": 22,
+      "low_text_pages": [
+        3,
+        22
+      ]
+    },
+    {
+      "path": "raw/encargo/ejercicio-3-desarrollo.pptx",
+      "original_name": "Ejercicio 3. Desarrollo.pptx",
+      "archive_chain": [
+        "Ejercicio 3. Desarrollo.pptx"
+      ],
+      "group": "encargo",
+      "bytes": 1240143,
+      "sha256": "7b9644f982a97a64c9ea948dfc19c8032fddc3c16b3d69b7b0f20e1d6fd9eedb",
+      "extension": ".pptx",
+      "id": "PPT-001",
+      "extraction": "knowledge-base/extracciones/ppt-001-ejercicio-3-desarrollo.md",
+      "dossier": "knowledge-base/fuentes/ppt-001-ejercicio-3-desarrollo.md",
+      "slides": 25
+    },
+    {
+      "path": "raw/fundamentos/ejercicios-valoracion-fundamentos-1/grandes-numeros-1-iid.xlsx",
+      "original_name": "Grandes números-1-iid.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Ejercicios_Valoracion_Fundamentos_1.zip",
+        "Grandes números-1-iid.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 107862,
+      "sha256": "fa4888fb605fa178a920e8bb32ae39826ef1a717f52446400291c93499ac64bf",
+      "extension": ".xlsx",
+      "id": "XLS-001",
+      "extraction": "knowledge-base/extracciones/xls-001-grandes-numeros-1-iid.md",
+      "dossier": "knowledge-base/fuentes/xls-001-grandes-numeros-1-iid.md",
+      "sheets": 1,
+      "formulas": 4946,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/ejercicios-valoracion-fundamentos-1/grandes-numeros-2-correlacion.xlsx",
+      "original_name": "Grandes números-2-correlación.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Ejercicios_Valoracion_Fundamentos_1.zip",
+        "Grandes números-2-correlación.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 78136,
+      "sha256": "5cb77c881df07cab89cb715db89222873f62ee3c6fa972885aed620fd6156372",
+      "extension": ".xlsx",
+      "id": "XLS-002",
+      "extraction": "knowledge-base/extracciones/xls-002-grandes-numeros-2-correlacion.md",
+      "dossier": "knowledge-base/fuentes/xls-002-grandes-numeros-2-correlacion.md",
+      "sheets": 1,
+      "formulas": 4086,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/ejercicios-valoracion-fundamentos-1/plantilla1.xlsx",
+      "original_name": "Plantilla1.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Ejercicios_Valoracion_Fundamentos_1.zip",
+        "Plantilla1.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 134034,
+      "sha256": "fa60b086524f134c836f1f69c09ad2e03e63856ca1e5fe218f36817290dc07ac",
+      "extension": ".xlsx",
+      "id": "XLS-003",
+      "extraction": "knowledge-base/extracciones/xls-003-plantilla1.md",
+      "dossier": "knowledge-base/fuentes/xls-003-plantilla1.md",
+      "sheets": 1,
+      "formulas": 0,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/ejercicios-valoracion-fundamentos-1/plantilla2.xlsx",
+      "original_name": "plantilla2.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Ejercicios_Valoracion_Fundamentos_1.zip",
+        "plantilla2.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 32309,
+      "sha256": "781b724ecc8a97872e549a79b4c1257db82be9d8f7d04721cd0b1ee1e95eadb7",
+      "extension": ".xlsx",
+      "id": "XLS-004",
+      "extraction": "knowledge-base/extracciones/xls-004-plantilla2.md",
+      "dossier": "knowledge-base/fuentes/xls-004-plantilla2.md",
+      "sheets": 1,
+      "formulas": 17,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/plantilla-3-solucion1.xlsx",
+      "original_name": "Plantilla_3 - Solucion1.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Plantilla_3 - Solucion1.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 115871,
+      "sha256": "25e6734128a6694eb781e447c4bd46460834d6ddf5f5cad6358f554b67aa8de2",
+      "extension": ".xlsx",
+      "id": "XLS-005",
+      "extraction": "knowledge-base/extracciones/xls-005-plantilla-3-solucion1.md",
+      "dossier": "knowledge-base/fuentes/xls-005-plantilla-3-solucion1.md",
+      "sheets": 1,
+      "formulas": 198,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/sesion-ii/plantilla-3.xlsx",
+      "original_name": "Plantilla_3.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Sesion_II.zip",
+        "Plantilla_3.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 84034,
+      "sha256": "9a65ce1bea71c4207d82fdf9d79a6bb0964bc826410d06526a1a5810fc780e21",
+      "extension": ".xlsx",
+      "id": "XLS-006",
+      "extraction": "knowledge-base/extracciones/xls-006-plantilla-3.md",
+      "dossier": "knowledge-base/fuentes/xls-006-plantilla-3.md",
+      "sheets": 1,
+      "formulas": 5,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/sesion-ii/plantilla1-solucion.xlsx",
+      "original_name": "Plantilla1_Solucion.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Sesion_II.zip",
+        "Plantilla1_Solucion.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 156891,
+      "sha256": "16e99a21100402bc5b19d2901725fdc76b167bb81f4962ae2c397e560238cde4",
+      "extension": ".xlsx",
+      "id": "XLS-007",
+      "extraction": "knowledge-base/extracciones/xls-007-plantilla1-solucion.md",
+      "dossier": "knowledge-base/fuentes/xls-007-plantilla1-solucion.md",
+      "sheets": 1,
+      "formulas": 135,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/sesion-ii/plantilla2-solucion.xlsx",
+      "original_name": "Plantilla2_Solucion.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "Sesion_II.zip",
+        "Plantilla2_Solucion.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 37840,
+      "sha256": "75d0ca4dc327ebfd98ee39f1be7b42f1daa8011e205e18174529ef2859cefacd",
+      "extension": ".xlsx",
+      "id": "XLS-008",
+      "extraction": "knowledge-base/extracciones/xls-008-plantilla2-solucion.md",
+      "dossier": "knowledge-base/fuentes/xls-008-plantilla2-solucion.md",
+      "sheets": 1,
+      "formulas": 217,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/sesioniii/americana-con-dividendos.xlsx",
+      "original_name": "Americana con dividendos.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "SesionIII.zip",
+        "Americana con dividendos.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 80341,
+      "sha256": "9e8c745e20fb66a5e798a746c0c20c19d21a9ac448bb1811f35bd108de351539",
+      "extension": ".xlsx",
+      "id": "XLS-009",
+      "extraction": "knowledge-base/extracciones/xls-009-americana-con-dividendos.md",
+      "dossier": "knowledge-base/fuentes/xls-009-americana-con-dividendos.md",
+      "sheets": 2,
+      "formulas": 1212,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/sesioniii/arbol-arrow-debreu.xlsx",
+      "original_name": "Arbol arrow-debreu.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "SesionIII.zip",
+        "Arbol arrow-debreu.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 30848,
+      "sha256": "73502d3186c05471eed13965cf0652e94924ca1a443ee8b85a4e2e0d760fda84",
+      "extension": ".xlsx",
+      "id": "XLS-010",
+      "extraction": "knowledge-base/extracciones/xls-010-arbol-arrow-debreu.md",
+      "dossier": "knowledge-base/fuentes/xls-010-arbol-arrow-debreu.md",
+      "sheets": 3,
+      "formulas": 56,
+      "vba": false
+    },
+    {
+      "path": "raw/fundamentos/sesioniii/arbol-volas-no-ctes.xlsm",
+      "original_name": "Arbol volas no ctes.xlsm",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "SesionIII.zip",
+        "Arbol volas no ctes.xlsm"
+      ],
+      "group": "fundamentos",
+      "bytes": 62019,
+      "sha256": "c67f2ae7a57e11a2cdfacaa39b0badb70d25779c5ec397a6444b4737f32fc7c8",
+      "extension": ".xlsm",
+      "id": "XLS-011",
+      "extraction": "knowledge-base/extracciones/xls-011-arbol-volas-no-ctes.md",
+      "dossier": "knowledge-base/fuentes/xls-011-arbol-volas-no-ctes.md",
+      "sheets": 2,
+      "formulas": 394,
+      "vba": true
+    },
+    {
+      "path": "raw/fundamentos/sesioniii/bdt.xlsx",
+      "original_name": "BDT.xlsx",
+      "archive_chain": [
+        "Fundamentos - José María Contreras-20261024(1).zip",
+        "SesionIII.zip",
+        "BDT.xlsx"
+      ],
+      "group": "fundamentos",
+      "bytes": 41584,
+      "sha256": "c77c7ea47283b28716f27cca5367532309de44c744cf73cb18573eb16cf07cc2",
+      "extension": ".xlsx",
+      "id": "XLS-012",
+      "extraction": "knowledge-base/extracciones/xls-012-bdt.md",
+      "dossier": "knowledge-base/fuentes/xls-012-bdt.md",
+      "sheets": 2,
+      "formulas": 250,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity-soluciones/pag-1-27-call-cobertura-discreta.xlsx",
+      "original_name": "pag 1.27 call-cobertura discreta.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity. Soluciones.zip",
+        "1.Valoración. Marco Black Equity. Soluciones/pag 1.27 call-cobertura discreta.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1350320,
+      "sha256": "8143b57842ac1ee831d672a06a56ec3f6f196ab953375943bfb6475af48ed253",
+      "extension": ".xlsx",
+      "id": "XLS-013",
+      "extraction": "knowledge-base/extracciones/xls-013-pag-1-27-call-cobertura-discreta.md",
+      "dossier": "knowledge-base/fuentes/xls-013-pag-1-27-call-cobertura-discreta.md",
+      "sheets": 1,
+      "formulas": 402,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity-soluciones/pag-1-32-payoff-arbitrario.xlsx",
+      "original_name": "pag 1.32 payoff arbitrario.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity. Soluciones.zip",
+        "1.Valoración. Marco Black Equity. Soluciones/pag 1.32 payoff arbitrario.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1338467,
+      "sha256": "3c28f48c6a2825a495aa0506634f70b68958244cc3d05006010d26229c6323c3",
+      "extension": ".xlsx",
+      "id": "XLS-014",
+      "extraction": "knowledge-base/extracciones/xls-014-pag-1-32-payoff-arbitrario.md",
+      "dossier": "knowledge-base/fuentes/xls-014-pag-1-32-payoff-arbitrario.md",
+      "sheets": 1,
+      "formulas": 7054,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity-soluciones/pag-1-33-probs-implicitas-con-calls-puts.xlsx",
+      "original_name": "pag 1.33 probs implicitas con calls-puts.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity. Soluciones.zip",
+        "1.Valoración. Marco Black Equity. Soluciones/pag 1.33 probs implicitas con calls-puts.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1182539,
+      "sha256": "686eb1dfadeee79240602605587a899c6727cbc6e570e46cc41fdb3777dd7341",
+      "extension": ".xlsx",
+      "id": "XLS-015",
+      "extraction": "knowledge-base/extracciones/xls-015-pag-1-33-probs-implicitas-con-calls-puts.md",
+      "dossier": "knowledge-base/fuentes/xls-015-pag-1-33-probs-implicitas-con-calls-puts.md",
+      "sheets": 1,
+      "formulas": 1318,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity-soluciones/pag-1-36-dividendo-discreto.xlsx",
+      "original_name": "pag 1.36 dividendo discreto.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity. Soluciones.zip",
+        "1.Valoración. Marco Black Equity. Soluciones/pag 1.36 dividendo discreto.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1282028,
+      "sha256": "a27abc2d42472406fd2c63abd4176990011e3c6126db0b271ea511ec6e40be4a",
+      "extension": ".xlsx",
+      "id": "XLS-016",
+      "extraction": "knowledge-base/extracciones/xls-016-pag-1-36-dividendo-discreto.md",
+      "dossier": "knowledge-base/fuentes/xls-016-pag-1-36-dividendo-discreto.md",
+      "sheets": 2,
+      "formulas": 6125,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity-soluciones/pag-1-39-opcion-sobre-dos-activos.xlsx",
+      "original_name": "pag 1.39 opcion sobre dos activos.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity. Soluciones.zip",
+        "1.Valoración. Marco Black Equity. Soluciones/pag 1.39 opcion sobre dos activos.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1634128,
+      "sha256": "75e9e5eedc3599bcf8acb2873d94d78dbc32502f0f3d893039526f74fbeddfdc",
+      "extension": ".xlsx",
+      "id": "XLS-017",
+      "extraction": "knowledge-base/extracciones/xls-017-pag-1-39-opcion-sobre-dos-activos.md",
+      "dossier": "knowledge-base/fuentes/xls-017-pag-1-39-opcion-sobre-dos-activos.md",
+      "sheets": 1,
+      "formulas": 19414,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity/1-1-call-cobertura-discreta-plantilla.xlsx",
+      "original_name": "1.1.call-cobertura discreta_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity.zip",
+        "1.Valoración. Marco Black Equity. Ejercicios/1.1.call-cobertura discreta_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 94150,
+      "sha256": "6bc583ae5097450097770f586dfa9bb10f92afcc2e5f1b79c707461622edb28b",
+      "extension": ".xlsx",
+      "id": "XLS-018",
+      "extraction": "knowledge-base/extracciones/xls-018-1-1-call-cobertura-discreta-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-018-1-1-call-cobertura-discreta-plantilla.md",
+      "sheets": 1,
+      "formulas": 27,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity/1-2-payoff-arbitrario-plantilla.xlsx",
+      "original_name": "1.2.payoff arbitrario_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity.zip",
+        "1.Valoración. Marco Black Equity. Ejercicios/1.2.payoff arbitrario_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 77227,
+      "sha256": "7fc364a3702dc630fb50180b8b3545a7cf35cd45f3286bebfaf6c308f49563d6",
+      "extension": ".xlsx",
+      "id": "XLS-019",
+      "extraction": "knowledge-base/extracciones/xls-019-1-2-payoff-arbitrario-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-019-1-2-payoff-arbitrario-plantilla.md",
+      "sheets": 1,
+      "formulas": 1,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity/1-3-probs-implicitas-con-calls-puts-plantilla.xlsx",
+      "original_name": "1.3.probs implicitas con calls-puts_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity.zip",
+        "1.Valoración. Marco Black Equity. Ejercicios/1.3.probs implicitas con calls-puts_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 39339,
+      "sha256": "5dc045a9ec10fe400e7d09af28e99668015c9ff1a6ba714a6b4f66cfb57f599c",
+      "extension": ".xlsx",
+      "id": "XLS-020",
+      "extraction": "knowledge-base/extracciones/xls-020-1-3-probs-implicitas-con-calls-puts-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-020-1-3-probs-implicitas-con-calls-puts-plantilla.md",
+      "sheets": 1,
+      "formulas": 143,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity/1-4-dividendo-discreto-plantilla.xlsx",
+      "original_name": "1.4.dividendo discreto_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity.zip",
+        "1.Valoración. Marco Black Equity. Ejercicios/1.4.dividendo discreto_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 40687,
+      "sha256": "d4e1ecfabb94a52f8c846c09c25af428df1207d9c940e5e5515e36b638dcbd39",
+      "extension": ".xlsx",
+      "id": "XLS-021",
+      "extraction": "knowledge-base/extracciones/xls-021-1-4-dividendo-discreto-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-021-1-4-dividendo-discreto-plantilla.md",
+      "sheets": 1,
+      "formulas": 5,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/1-valoracion-marco-black-equity/1-5-opcion-sobre-dos-activos-plantilla.xlsx",
+      "original_name": "1.5.opcion sobre dos activos_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "1.Valoración. Marco Black Equity.zip",
+        "1.Valoración. Marco Black Equity. Ejercicios/1.5.opcion sobre dos activos_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 193361,
+      "sha256": "902566e3d6aa5147908223310d7be36a443b20c01e3bf8350d2b278dc64706c2",
+      "extension": ".xlsx",
+      "id": "XLS-022",
+      "extraction": "knowledge-base/extracciones/xls-022-1-5-opcion-sobre-dos-activos-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-022-1-5-opcion-sobre-dos-activos-plantilla.md",
+      "sheets": 1,
+      "formulas": 200,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos-soluciones/pag-2-13-cap.xlsx",
+      "original_name": "pag 2.13 cap.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip",
+        "4. Valoración. Marco Black. Tipos. Soluciones/pag 2.13 cap.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1163449,
+      "sha256": "6126b8574a27c5f3e18b5667d1566fd2f80b839ce2d9c0349cb4a7617c5783cf",
+      "extension": ".xlsx",
+      "id": "XLS-023",
+      "extraction": "knowledge-base/extracciones/xls-023-pag-2-13-cap.md",
+      "dossier": "knowledge-base/fuentes/xls-023-pag-2-13-cap.md",
+      "sheets": 1,
+      "formulas": 106,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos-soluciones/pag-2-13-caplet-floorlet.xlsx",
+      "original_name": "pag 2.13 caplet- floorlet.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip",
+        "4. Valoración. Marco Black. Tipos. Soluciones/pag 2.13 caplet- floorlet.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1196795,
+      "sha256": "44329975d04bee365353f5678074b112d6a6bb75e550f6d67d9f6c4ab125ce87",
+      "extension": ".xlsx",
+      "id": "XLS-024",
+      "extraction": "knowledge-base/extracciones/xls-024-pag-2-13-caplet-floorlet.md",
+      "dossier": "knowledge-base/fuentes/xls-024-pag-2-13-caplet-floorlet.md",
+      "sheets": 1,
+      "formulas": 12,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos-soluciones/pag-2-17-fra-caplet-floorlet-in-arrears.xlsx",
+      "original_name": "pag 2.17 fra-caplet-floorlet+in arrears.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip",
+        "4. Valoración. Marco Black. Tipos. Soluciones/pag 2.17 fra-caplet-floorlet+in arrears.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1230793,
+      "sha256": "18d1cedf06b69564040888aba3e8c315c4bd2c139fd2b85316e620e9140996e4",
+      "extension": ".xlsx",
+      "id": "XLS-025",
+      "extraction": "knowledge-base/extracciones/xls-025-pag-2-17-fra-caplet-floorlet-in-arrears.md",
+      "dossier": "knowledge-base/fuentes/xls-025-pag-2-17-fra-caplet-floorlet-in-arrears.md",
+      "sheets": 1,
+      "formulas": 26,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos-soluciones/pag-2-18-swap-in-arrears.xlsm",
+      "original_name": "pag 2.18 swap in arrears.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip",
+        "4. Valoración. Marco Black. Tipos. Soluciones/pag 2.18 swap in arrears.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 1202401,
+      "sha256": "cc4a5da06d668e2ebd1a6bdb09dfe84128f5a591d7bcfb0153f3a0aff5c94fb0",
+      "extension": ".xlsm",
+      "id": "XLS-026",
+      "extraction": "knowledge-base/extracciones/xls-026-pag-2-18-swap-in-arrears.md",
+      "dossier": "knowledge-base/fuentes/xls-026-pag-2-18-swap-in-arrears.md",
+      "sheets": 1,
+      "formulas": 346,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos-soluciones/pag-2-28-swaption.xlsm",
+      "original_name": "pag 2.28 swaption.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip",
+        "4. Valoración. Marco Black. Tipos. Soluciones/pag 2.28 swaption.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 1167234,
+      "sha256": "09780e5f51c9c4f4eef8b2d83649f070438d5d3cdb0135c584b882097ff50ffc",
+      "extension": ".xlsm",
+      "id": "XLS-027",
+      "extraction": "knowledge-base/extracciones/xls-027-pag-2-28-swaption.md",
+      "dossier": "knowledge-base/fuentes/xls-027-pag-2-28-swaption.md",
+      "sheets": 1,
+      "formulas": 558,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos-soluciones/pag-2-29-valoracion-bono-con-cupones.xlsx",
+      "original_name": "pag 2.29 valoración bono con cupones.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip",
+        "4. Valoración. Marco Black. Tipos. Soluciones/pag 2.29 valoración bono con cupones.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1176306,
+      "sha256": "fb32c336b043adc4f2757181573931852c9764ce44de7c32643edfec614ea9e1",
+      "extension": ".xlsx",
+      "id": "XLS-028",
+      "extraction": "knowledge-base/extracciones/xls-028-pag-2-29-valoracion-bono-con-cupones.md",
+      "dossier": "knowledge-base/fuentes/xls-028-pag-2-29-valoracion-bono-con-cupones.md",
+      "sheets": 1,
+      "formulas": 1052,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos-soluciones/pag-2-35-cms10y.xlsm",
+      "original_name": "pag 2.35-CMS10Y.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos. Soluciones.zip",
+        "4. Valoración. Marco Black. Tipos. Soluciones/pag 2.35-CMS10Y.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 1201839,
+      "sha256": "17529489811bbbed15ebe43582a2602cae16bdf3f8b09671a7295504382925b9",
+      "extension": ".xlsm",
+      "id": "XLS-029",
+      "extraction": "knowledge-base/extracciones/xls-029-pag-2-35-cms10y.md",
+      "dossier": "knowledge-base/fuentes/xls-029-pag-2-35-cms10y.md",
+      "sheets": 1,
+      "formulas": 516,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/cap-plantilla.xlsx",
+      "original_name": "cap_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2. Valoración. Marco Black. Tipos. Ejercicios/cap_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 12802,
+      "sha256": "a1ef8a26d68ff79d43e8042e0ca27874191d612091fd35e8e9d5779574f80068",
+      "extension": ".xlsx",
+      "id": "XLS-030",
+      "extraction": "knowledge-base/extracciones/xls-030-cap-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-030-cap-plantilla.md",
+      "sheets": 1,
+      "formulas": 23,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/caplet-floorlet-plantilla.xlsx",
+      "original_name": "caplet- floorlet_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2. Valoración. Marco Black. Tipos. Ejercicios/caplet- floorlet_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 57408,
+      "sha256": "599d8f020184eb60307550e02853703e07b6011c162a1f9a0b94935b2b0fa01d",
+      "extension": ".xlsx",
+      "id": "XLS-031",
+      "extraction": "knowledge-base/extracciones/xls-031-caplet-floorlet-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-031-caplet-floorlet-plantilla.md",
+      "sheets": 1,
+      "formulas": 1,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/cms10y-plantilla.xlsm",
+      "original_name": "CMS10Y_Plantilla.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2. Valoración. Marco Black. Tipos. Ejercicios/CMS10Y_Plantilla.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 55143,
+      "sha256": "c085ced28c27c8e75fe25bf6554b8fd890073c09d5eed72dbbdc0010230fb4c1",
+      "extension": ".xlsm",
+      "id": "XLS-032",
+      "extraction": "knowledge-base/extracciones/xls-032-cms10y-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-032-cms10y-plantilla.md",
+      "sheets": 1,
+      "formulas": 238,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/fra-caplet-floorlet-in-arrears-plantilla.xlsx",
+      "original_name": "fra-caplet-floorlet+in arrears_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2. Valoración. Marco Black. Tipos. Ejercicios/fra-caplet-floorlet+in arrears_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 91159,
+      "sha256": "020c1ad696ae1f90f2f52db14643c883ad23935dde36e40df7d29a254d3b8b40",
+      "extension": ".xlsx",
+      "id": "XLS-033",
+      "extraction": "knowledge-base/extracciones/xls-033-fra-caplet-floorlet-in-arrears-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-033-fra-caplet-floorlet-in-arrears-plantilla.md",
+      "sheets": 1,
+      "formulas": 1,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/swap-in-arrears-plantilla.xlsm",
+      "original_name": "swap in arrears_Plantilla.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2. Valoración. Marco Black. Tipos. Ejercicios/swap in arrears_Plantilla.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 58897,
+      "sha256": "8cf9e078b2b8082ffb32ada3c828b8282e7acae0c77a9fa5b2841cf847ab3ec3",
+      "extension": ".xlsm",
+      "id": "XLS-034",
+      "extraction": "knowledge-base/extracciones/xls-034-swap-in-arrears-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-034-swap-in-arrears-plantilla.md",
+      "sheets": 1,
+      "formulas": 110,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/swaption-plantilla.xlsm",
+      "original_name": "swaption_Plantilla.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2. Valoración. Marco Black. Tipos. Ejercicios/swaption_Plantilla.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 21492,
+      "sha256": "c8705accb12ba785c1934ac498a77bf45cad2b9447099daf50a51f4f86e3fd3b",
+      "extension": ".xlsm",
+      "id": "XLS-035",
+      "extraction": "knowledge-base/extracciones/xls-035-swaption-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-035-swaption-plantilla.md",
+      "sheets": 1,
+      "formulas": 147,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/2-valoracion-marco-black-tipos/valoracion-bono-con-cupones-plantilla.xlsx",
+      "original_name": "valoración bono con cupones_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "2. Valoración. Marco Black. Tipos.zip",
+        "2. Valoración. Marco Black. Tipos. Ejercicios/valoración bono con cupones_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 21645,
+      "sha256": "f9f42b88a61386ba611d79dbfc6f5d71e786cf9fd11cb4c79f4bc435508b92af",
+      "extension": ".xlsx",
+      "id": "XLS-036",
+      "extraction": "knowledge-base/extracciones/xls-036-valoracion-bono-con-cupones-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-036-valoracion-bono-con-cupones-plantilla.md",
+      "sheets": 1,
+      "formulas": 3,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion-marco-black-soluciones/anexo1-cotizador-volas-mueve-plazos.xlsx",
+      "original_name": "Anexo1.-cotizador-volas-mueve-plazos.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración. Marco Black. Soluciones.zip",
+        "Anexos. Valoración. Marco Black. Soluciones/Anexo1.-cotizador-volas-mueve-plazos.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1208917,
+      "sha256": "1f49aa176ed125b8516697fb92d810b0322361befb000da16ec80b54ee434e63",
+      "extension": ".xlsx",
+      "id": "XLS-037",
+      "extraction": "knowledge-base/extracciones/xls-037-anexo1-cotizador-volas-mueve-plazos.md",
+      "dossier": "knowledge-base/fuentes/xls-037-anexo1-cotizador-volas-mueve-plazos.md",
+      "sheets": 1,
+      "formulas": 249,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion-marco-black-soluciones/anexo1-cotizador-volas-mueve-strikes.xlsx",
+      "original_name": "Anexo1.-cotizador-volas-mueve-strikes.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración. Marco Black. Soluciones.zip",
+        "Anexos. Valoración. Marco Black. Soluciones/Anexo1.-cotizador-volas-mueve-strikes.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1208926,
+      "sha256": "1f23508db99caf698977c77f92e167c8460fa2c553c90994f99f89dc61f430c6",
+      "extension": ".xlsx",
+      "id": "XLS-038",
+      "extraction": "knowledge-base/extracciones/xls-038-anexo1-cotizador-volas-mueve-strikes.md",
+      "dossier": "knowledge-base/fuentes/xls-038-anexo1-cotizador-volas-mueve-strikes.md",
+      "sheets": 1,
+      "formulas": 358,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion-marco-black-soluciones/anexo1-escenarios-shifted.xlsx",
+      "original_name": "Anexo1.-escenarios-shifted.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración. Marco Black. Soluciones.zip",
+        "Anexos. Valoración. Marco Black. Soluciones/Anexo1.-escenarios-shifted.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1172091,
+      "sha256": "6745dfd770fe25ce891e4623f9b80881f335e44237b987be2371d73bae522460",
+      "extension": ".xlsx",
+      "id": "XLS-039",
+      "extraction": "knowledge-base/extracciones/xls-039-anexo1-escenarios-shifted.md",
+      "dossier": "knowledge-base/fuentes/xls-039-anexo1-escenarios-shifted.md",
+      "sheets": 3,
+      "formulas": 423,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion-marco-black-soluciones/anexo1-p16-calculo-swap.xlsm",
+      "original_name": "Anexo1.p16-cálculo-swap.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración. Marco Black. Soluciones.zip",
+        "Anexos. Valoración. Marco Black. Soluciones/Anexo1.p16-cálculo-swap.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 28059,
+      "sha256": "2ce661cbdc6ced487e925203bd7f279ce1c173133f12f1a3708dbc5315ad98b8",
+      "extension": ".xlsm",
+      "id": "XLS-040",
+      "extraction": "knowledge-base/extracciones/xls-040-anexo1-p16-calculo-swap.md",
+      "dossier": "knowledge-base/fuentes/xls-040-anexo1-p16-calculo-swap.md",
+      "sheets": 2,
+      "formulas": 215,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion-marco-black-soluciones/anexo1-p16-calculo-tipo-swap.xlsm",
+      "original_name": "Anexo1.p16-calculo-tipo-swap.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración. Marco Black. Soluciones.zip",
+        "Anexos. Valoración. Marco Black. Soluciones/Anexo1.p16-calculo-tipo-swap.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 1175609,
+      "sha256": "f3cd8f488a2b9161da06d52a566a036287ba5c1b9ded598cb49ce166de4319f6",
+      "extension": ".xlsm",
+      "id": "XLS-041",
+      "extraction": "knowledge-base/extracciones/xls-041-anexo1-p16-calculo-tipo-swap.md",
+      "dossier": "knowledge-base/fuentes/xls-041-anexo1-p16-calculo-tipo-swap.md",
+      "sheets": 1,
+      "formulas": 172,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion-marco-black-soluciones/anexo2-fx.xlsx",
+      "original_name": "Anexo2.FX.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración. Marco Black. Soluciones.zip",
+        "Anexos. Valoración. Marco Black. Soluciones/Anexo2.FX.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 1315800,
+      "sha256": "15990deb6f3d8875714b3bdce35db81990532658eaf948473aa5399d89fd21ef",
+      "extension": ".xlsx",
+      "id": "XLS-042",
+      "extraction": "knowledge-base/extracciones/xls-042-anexo2-fx.md",
+      "dossier": "knowledge-base/fuentes/xls-042-anexo2-fx.md",
+      "sheets": 1,
+      "formulas": 9442,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/anexo1-calculo-swap.xlsm",
+      "original_name": "Anexo1.-cálculo-swap.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "Anexos. Valoración. Marco Black. Ejercicios/Anexo1.-cálculo-swap.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 27582,
+      "sha256": "692c2a430d54f9acd59e8a541dd0f36ab6d7f7f397c88ba0bf13671a7650e359",
+      "extension": ".xlsm",
+      "id": "XLS-043",
+      "extraction": "knowledge-base/extracciones/xls-043-anexo1-calculo-swap.md",
+      "dossier": "knowledge-base/fuentes/xls-043-anexo1-calculo-swap.md",
+      "sheets": 2,
+      "formulas": 191,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/anexo1-calculo-tipo-swap-plantilla.xlsm",
+      "original_name": "Anexo1.-calculo-tipo-swap_Plantilla.xlsm",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "Anexos. Valoración. Marco Black. Ejercicios/Anexo1.-calculo-tipo-swap_Plantilla.xlsm"
+      ],
+      "group": "marco-black",
+      "bytes": 33818,
+      "sha256": "0e02749faf14ec87234d23af46724fc2565d34c4bbcb66c55460eb1242e05e51",
+      "extension": ".xlsm",
+      "id": "XLS-044",
+      "extraction": "knowledge-base/extracciones/xls-044-anexo1-calculo-tipo-swap-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-044-anexo1-calculo-tipo-swap-plantilla.md",
+      "sheets": 1,
+      "formulas": 82,
+      "vba": true
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/anexo1-cotizador-volas-mueve-plazos-plantilla.xlsx",
+      "original_name": "Anexo1.-cotizador-volas-mueve-plazos_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "Anexos. Valoración. Marco Black. Ejercicios/Anexo1.-cotizador-volas-mueve-plazos_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 64572,
+      "sha256": "29614d627b7302084d762d30e43c96f300f09c244fcf4a618f1f056448704aab",
+      "extension": ".xlsx",
+      "id": "XLS-045",
+      "extraction": "knowledge-base/extracciones/xls-045-anexo1-cotizador-volas-mueve-plazos-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-045-anexo1-cotizador-volas-mueve-plazos-plantilla.md",
+      "sheets": 1,
+      "formulas": 41,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/anexo1-cotizador-volas-mueve-strikes-plantilla.xlsx",
+      "original_name": "Anexo1.-cotizador-volas-mueve-strikes_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "Anexos. Valoración. Marco Black. Ejercicios/Anexo1.-cotizador-volas-mueve-strikes_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 62508,
+      "sha256": "85f7c3ee144c98fccdcf452e9393ea10a76de9f836d3abbddb6b0232f4c1452e",
+      "extension": ".xlsx",
+      "id": "XLS-046",
+      "extraction": "knowledge-base/extracciones/xls-046-anexo1-cotizador-volas-mueve-strikes-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-046-anexo1-cotizador-volas-mueve-strikes-plantilla.md",
+      "sheets": 1,
+      "formulas": 14,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/anexo1-escenarios-shifted-plantilla.xlsx",
+      "original_name": "Anexo1.-escenarios-shifted_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "Anexos. Valoración. Marco Black. Ejercicios/Anexo1.-escenarios-shifted_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 27144,
+      "sha256": "22c866da9dcf7c6b45e3d300d13f70fbc9f88ab13cabf3969098d53cc82f6148",
+      "extension": ".xlsx",
+      "id": "XLS-047",
+      "extraction": "knowledge-base/extracciones/xls-047-anexo1-escenarios-shifted-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-047-anexo1-escenarios-shifted-plantilla.md",
+      "sheets": 3,
+      "formulas": 166,
+      "vba": false
+    },
+    {
+      "path": "raw/marco-black/anexos-valoracion/anexo2-fx-plantilla.xlsx",
+      "original_name": "Anexo2.FX_Plantilla.xlsx",
+      "archive_chain": [
+        "Marco Black - Javier Calderón-20261024(1).zip",
+        "Anexos. Valoración.zip",
+        "Anexos. Valoración. Marco Black. Ejercicios/Anexo2.FX_Plantilla.xlsx"
+      ],
+      "group": "marco-black",
+      "bytes": 70682,
+      "sha256": "da08a5bd39f6e3586fdcba40a6113a23e5cc83cb39ee8dccac01e073871b8564",
+      "extension": ".xlsx",
+      "id": "XLS-048",
+      "extraction": "knowledge-base/extracciones/xls-048-anexo2-fx-plantilla.md",
+      "dossier": "knowledge-base/fuentes/xls-048-anexo2-fx-plantilla.md",
+      "sheets": 1,
+      "formulas": 4,
+      "vba": false
+    }
+  ]
+}

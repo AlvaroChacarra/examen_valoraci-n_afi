@@ -1,5 +1,4 @@
 __pycache__/
+metadata/
+tmp/
 *.pyc
-.venv/
-.DS_Store
-work/
