@@ -4,13 +4,16 @@ Base de conocimiento de los materiales de José María Contreras y Javier Calder
 
 La [resolución nueva de los tres ejercicios](soluciones/README.md) incluye memoria PDF, hojas recalculadas, Python, pruebas y guía de defensa. La evidencia docente permanece separada e intacta.
 
+**Rama de la resolución: `solucion/mefc-2026`.** Main conserva la base documental previa. Para otro chat, compartir el enlace a esta rama.
+
 ## Empezar
 
-1. [Entrada para agentes](AGENTS.md).
-2. [Índice de conocimiento](knowledge-base/README.md).
-3. [Mapa de relaciones](knowledge-base/MAPA_RELACIONES.md).
-4. [Encargo y rutas para los tres ejercicios](knowledge-base/ejercicios/ENCARGO.md).
-5. [Catálogo de las 59 fuentes](knowledge-base/CATALOGO.md).
+Para estudiar la resolución con otro chat, empezar por [la guía para el agente](soluciones/GUIA_PARA_EL_AGENTE.md). Allí están el mapa de los tres ejercicios, las rutas de teoría y el modo de reconstruir las decisiones sin releer todo el repositorio.
+
+- [Memoria canónica](soluciones/MEMORIA.md) y [PDF de entrega](soluciones/MEMORIA.pdf).
+- [Motivos y alternativas](soluciones/DECISIONES.md).
+- [Estado actual](soluciones/ESTADO.md), [validación](soluciones/VALIDACION.md) y [ejecución/hojas](soluciones/README.md).
+- [Material docente](knowledge-base/README.md) y [catálogo de fuentes](knowledge-base/CATALOGO.md): consulta progresiva, no otro conjunto de soluciones.
 
 ## Organización
 

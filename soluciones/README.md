@@ -7,6 +7,8 @@ Resolución nueva de los tres ejercicios obligatorios y la call usual de +0,5. E
 - [Matriz de cumplimiento](MATRIZ_CUMPLIMIENTO.md), [validación](VALIDACION.md), [defensa individual](DEFENSA.md) y [auditoría posterior](AUDITORIA.md).
 - [Estado operativo](ESTADO.md), `src/` para código, `tests/`, `resultados/` y `figuras/` para evidencia.
 
+Para explicar el trabajo en un chat nuevo, leer primero [GUIA_PARA_EL_AGENTE](GUIA_PARA_EL_AGENTE.md) y [DECISIONES](DECISIONES.md). Las auditorías de versiones anteriores están en `auditoria/historico/` y no son el estado vigente.
+
 ## Reproducir desde la raíz del repositorio
 
 Entorno probado: Python 3.12.14, dependencias fijadas en requirements.txt. Instalar en un entorno virtual si se prepara otra máquina:

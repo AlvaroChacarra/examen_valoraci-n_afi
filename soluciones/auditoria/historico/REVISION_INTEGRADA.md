@@ -29,7 +29,7 @@ La documentación retira expresamente la conversión inicial con perfil por defe
 
 Se ejecutó el verificador ampliado sobre **los XLSX exactos de la entrega**, sin regenerarlos: 46.868 estados, 14 probabilidades y 33 auxiliares E2/E3 pasan; no hay errores de fórmula. Máximo error de valores de nodo: **6,139089236967266e-12**, frente a tolerancia 1e-9. Se verifican además masas, política, delta/cash, continuación BS y residuos locales/presupuesto. Evidencia en [xlsx_verificados_92be7d9.json](xlsx_verificados_92be7d9.json).
 
-**Edición real de inputs.** El [script independiente](perturba_inputs_xlsx.py) extrae los libros del commit por `git show`, edita copias, elimina las cachés al guardarlas con openpyxl, recalcula con un perfil aislado y contrasta resultados con el código del mismo commit. Pasan todos los controles numéricos y el escaneo de errores de los tres libros:
+**Edición real de inputs.** El [script independiente](../perturba_inputs_xlsx.py) extrae los libros del commit por `git show`, edita copias, elimina las cachés al guardarlas con openpyxl, recalcula con un perfil aislado y contrasta resultados con el código del mismo commit. Pasan todos los controles numéricos y el escaneo de errores de los tres libros:
 
 |Cambio en copia|Resultado recalculado observado|
 |---|---:|

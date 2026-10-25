@@ -22,14 +22,24 @@ def prices(f,k,variance,delta,p_u,nominal=1.):
 
 def integrate(f,k,variance,delta,p_u,nominal=1.):
     # Integración del payoff original ponderado; no reutiliza momentos cerrados.
+    if variance<0 or delta<=0 or p_u<=0:
+        raise ValueError('Dominio incorrecto')
+    if variance == 0:
+        scale=nominal*delta*p_u*(1+delta*f)
+        return dict(fra=scale*(f-k),caplet=scale*max(f-k,0),
+                    floorlet=scale*max(k-f,0))
     s=np.sqrt(variance);cut=(k-f)/s
+    # Incluir el centro impide que un strike remoto haga que QUADPACK
+    # omita toda la masa normal. Los intervalos exteriores siguen siendo
+    # infinitos: no se trunca ni se renormaliza la distribución del contrato.
+    panels=sorted(set([-np.inf,-8.,0.,8.,float(cut),np.inf]))
     def integrand(z,kind):
         x=f+s*z
         g={'fra':x-k,'caplet':max(x-k,0),'floorlet':max(k-x,0)}[kind]
         return g*(1+delta*x)*np.exp(-z*z/2)/np.sqrt(2*np.pi)
     out={}
     for kind in ['fra','caplet','floorlet']:
-        val=sum(quad(lambda z:integrand(z,kind),a,b,epsabs=1e-13,epsrel=1e-11)[0] for a,b in [(-np.inf,cut),(cut,np.inf)])
+        val=sum(quad(lambda z:integrand(z,kind),a,b,epsabs=1e-13,epsrel=1e-11)[0] for a,b in zip(panels[:-1],panels[1:]))
         out[kind]=nominal*delta*p_u*val
     return out
 

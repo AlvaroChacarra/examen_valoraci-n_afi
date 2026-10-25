@@ -49,9 +49,9 @@
     "par_strike": 0.030098522167487683
   },
   "quadrature": {
-    "fra": -895.2724643070508,
-    "caplet": 2232.647689671176,
-    "floorlet": 3127.920153978227
+    "fra": -895.2724643070551,
+    "caplet": 2232.6476896711756,
+    "floorlet": 3127.9201539782307
   }
 }
 {
@@ -168,13 +168,16 @@ test_smoothing_precision (test_ejercicio1.TestJR.test_smoothing_precision) ... o
 test_values_and_exact_probabilities (test_ejercicio1.TestJR.test_values_and_exact_probabilities) ... ok
 test_limits_and_scaling (test_ejercicio2.TestNormal.test_limits_and_scaling) ... ok
 test_quadrature_and_parity (test_ejercicio2.TestNormal.test_quadrature_and_parity) ... ok
+test_quadrature_rejects_invalid_variance (test_ejercicio2.TestNormal.test_quadrature_rejects_invalid_variance) ... ok
+test_quadrature_small_variance (test_ejercicio2.TestNormal.test_quadrature_small_variance) ... ok
 test_zero_time_and_par_strike (test_ejercicio2.TestNormal.test_zero_time_and_par_strike) ... ok
 test_limits_and_sign (test_ejercicio3.TestQuanto.test_limits_and_sign) ... ok
 test_quadrature_and_parities (test_ejercicio3.TestQuanto.test_quadrature_and_parities) ... ok
 test_simulation_martingales (test_ejercicio3.TestQuanto.test_simulation_martingales) ... ok
+test_stale_cache_and_normal_are_actually_calculated (test_hojas.TestRecalculo.test_stale_cache_and_normal_are_actually_calculated) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 0.895s
+Ran 14 tests in 21.892s
 
 OK
 Tres libros generados con fórmulas
@@ -219,7 +222,7 @@ convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio3.xlsx as a C
   "pages": [
     {
       "page": 1,
-      "characters": 2161,
+      "characters": 2162,
       "images": 0
     },
     {
@@ -234,82 +237,192 @@ convert /workspace/examen_valoraci-n_afi/soluciones/hojas/Ejercicio3.xlsx as a C
     },
     {
       "page": 4,
-      "characters": 2213,
+      "characters": 2673,
       "images": 0
     },
     {
       "page": 5,
-      "characters": 2419,
+      "characters": 2046,
       "images": 0
     },
     {
       "page": 6,
-      "characters": 1524,
+      "characters": 1389,
       "images": 1
     },
     {
       "page": 7,
-      "characters": 1506,
-      "images": 1
-    },
-    {
-      "page": 8,
-      "characters": 1637,
+      "characters": 2555,
       "images": 0
     },
     {
+      "page": 8,
+      "characters": 1238,
+      "images": 1
+    },
+    {
       "page": 9,
-      "characters": 1153,
+      "characters": 1332,
       "images": 0
     },
     {
       "page": 10,
-      "characters": 1380,
+      "characters": 956,
       "images": 0
     },
     {
       "page": 11,
-      "characters": 2547,
+      "characters": 2324,
       "images": 0
     },
     {
       "page": 12,
-      "characters": 1824,
+      "characters": 2384,
       "images": 0
     },
     {
       "page": 13,
-      "characters": 1284,
+      "characters": 1583,
       "images": 0
     },
     {
       "page": 14,
-      "characters": 1301,
+      "characters": 1277,
       "images": 0
     },
     {
       "page": 15,
-      "characters": 1689,
+      "characters": 1402,
       "images": 0
     },
     {
       "page": 16,
-      "characters": 1273,
+      "characters": 1309,
       "images": 0
     },
     {
       "page": 17,
-      "characters": 2416,
+      "characters": 1782,
       "images": 0
     },
     {
       "page": 18,
-      "characters": 1358,
+      "characters": 2669,
+      "images": 0
+    },
+    {
+      "page": 19,
+      "characters": 126,
       "images": 0
     }
   ],
   "blocks_outside_safe_area": [],
-  "pdf_pages": 18,
-  "pdf_bytes": 224743,
+  "pdf_pages": 19,
+  "pdf_bytes": 226541,
+  "note": "Renders para revisi\u00f3n visual en tmp/revision_pdf; la detecci\u00f3n de m\u00e1rgenes no certifica el dise\u00f1o."
+}
+
+Recompilación editorial final: Pandoc/XeLaTeX y revisa_pdf ejecutados tras condensar el cierre de la memoria.
+{
+  "pages": [
+    {
+      "page": 1,
+      "characters": 2162,
+      "images": 0
+    },
+    {
+      "page": 2,
+      "characters": 2666,
+      "images": 0
+    },
+    {
+      "page": 3,
+      "characters": 1956,
+      "images": 0
+    },
+    {
+      "page": 4,
+      "characters": 2673,
+      "images": 0
+    },
+    {
+      "page": 5,
+      "characters": 2046,
+      "images": 0
+    },
+    {
+      "page": 6,
+      "characters": 1389,
+      "images": 1
+    },
+    {
+      "page": 7,
+      "characters": 2555,
+      "images": 0
+    },
+    {
+      "page": 8,
+      "characters": 1238,
+      "images": 1
+    },
+    {
+      "page": 9,
+      "characters": 1332,
+      "images": 0
+    },
+    {
+      "page": 10,
+      "characters": 956,
+      "images": 0
+    },
+    {
+      "page": 11,
+      "characters": 2324,
+      "images": 0
+    },
+    {
+      "page": 12,
+      "characters": 2384,
+      "images": 0
+    },
+    {
+      "page": 13,
+      "characters": 1583,
+      "images": 0
+    },
+    {
+      "page": 14,
+      "characters": 1277,
+      "images": 0
+    },
+    {
+      "page": 15,
+      "characters": 1402,
+      "images": 0
+    },
+    {
+      "page": 16,
+      "characters": 1309,
+      "images": 0
+    },
+    {
+      "page": 17,
+      "characters": 1782,
+      "images": 0
+    },
+    {
+      "page": 18,
+      "characters": 2504,
+      "images": 0
+    },
+    {
+      "page": 19,
+      "characters": 206,
+      "images": 0
+    }
+  ],
+  "blocks_outside_safe_area": [],
+  "pdf_pages": 19,
+  "pdf_bytes": 226480,
   "note": "Renders para revisi\u00f3n visual en tmp/revision_pdf; la detecci\u00f3n de m\u00e1rgenes no certifica el dise\u00f1o."
 }

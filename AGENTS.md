@@ -1,38 +1,27 @@
 # Entrada para agentes
 
-## Primera lectura
+## Si vienes a explicar el trabajo al alumno
 
-Leer [knowledge-base/README.md](knowledge-base/README.md), [mapa de relaciones](knowledge-base/MAPA_RELACIONES.md) y [limitaciones](knowledge-base/LIMITACIONES.md). Si la consulta es sobre el trabajo, leer además [ENCARGO](knowledge-base/ejercicios/ENCARGO.md).
+1. Leer [guía de aprendizaje y localización](soluciones/GUIA_PARA_EL_AGENTE.md).
+2. Leer [estado actual](soluciones/ESTADO.md) y la sección pertinente de [la memoria canónica](soluciones/MEMORIA.md).
+3. Consultar la teoría docente progresivamente por las rutas de la guía. No empezar releyendo todas las extracciones ni auditorías históricas.
 
-Antes de comenzar una solución, leer [la segunda revisión](knowledge-base/REVISION_PREPARACION.md): contiene la matriz de obligaciones y controles por ejercicio.
+## Si vienes a modificar o auditar
 
-## Recuperación progresiva
-
-1. Elegir el concepto en [conceptos/README](knowledge-base/conceptos/README.md).
-2. Localizar la fuente en [CATALOGO](knowledge-base/CATALOGO.md).
-3. Abrir su ficha en `knowledge-base/fuentes/`. Contiene objetivo, método, resultados y relación plantilla/solución.
-4. Consultar `knowledge-base/extracciones/` para celdas, fórmulas, etiquetas, páginas y VBA. Las fórmulas repetidas se agrupan en familias con ejemplos literales y valores guardados.
-5. Consultar el binario `raw/` sólo si la extracción y las imágenes recuperadas no resuelven una ambigüedad concreta. No reabrir todos los Excel al iniciar cada consulta.
-
-Buscar con `rg -n -i 'termino' knowledge-base`. Usar IDs de fuente y página PDF, diapositiva o `Hoja!Celda` al justificar una respuesta.
+Leer [ejecución y entregables](soluciones/README.md), [validación](soluciones/VALIDACION.md), [matriz de requisitos](soluciones/MATRIZ_CUMPLIMIENTO.md) y [decisiones](soluciones/DECISIONES.md). Para el contrato prevalecen PDF-002 y las 25 diapositivas de PPT-001; PDF-001 define entrega/defensa. Originales en raw/encargo; fichas y extracciones en knowledge-base. La [guía del encargo](knowledge-base/ejercicios/ENCARGO.md) enlaza las fuentes.
 
 ## Invariantes
 
-- `raw/` es evidencia inmutable. Verificar sus hashes con el catálogo; no recalcular, reparar ni sobrescribir los originales.
-- Diferenciar contenido original, interpretación editorial y derivación nueva. La extracción literal puede contener errores de OCR, fórmulas o ejemplos parciales.
-- Los valores Excel son cachés guardadas, no verificaciones actuales. Hay macros y vínculos externos documentados.
-- Los nombres locales prevalecen en su hoja sobre los de libro; consultar el ámbito en la extracción, incluidas las hojas ocultas.
-- Las plantillas sin fórmulas o con blancos no son fuentes de resultados cero.
-- La probabilidad de valoración depende del numerario; no llamarla probabilidad histórica.
-- Mantener moneda, unidades FX, fixing/pago, dividendos y volatilidad absoluta/relativa explícitos.
-- Para el encargo prevalecen PDF-002 y PPT-001. PDF-001 detalla la entrega individual. No presentar ejercicios de clase como solución del encargo.
-- No sustituir paso mensual por malla de varianza sin señalar el cambio; no copiar ajustes lognormales para un ejercicio normal.
-- No ejecutar VBA para explicar una fórmula. Su fuente ya está recuperada.
+- `raw/` es evidencia inmutable; no recalcular ni guardar originales. Verificar hashes con el catálogo.
+- Separar contenido docente, interpretación y derivación nueva. Los cachés de Excel docente no son resultados verificados.
+- Mantener calendario contractual, moneda, unidades, numerario y volatilidad absoluta/relativa explícitos.
+- E1: no sustituir meses por una malla de varianza; réplica exacta sólo en el árbol puro. La reconstrucción de 15 días es una convención y el suavizado sólo demuestra mejora en el origen.
+- E2: pago en T, bono U como numerario, normal formal sin truncar. La normal no define globalmente bonos positivos.
+- E3: FX EUR/USD, transformar correlaciones M,N frente a observables; quanto con conversión fija.
+- Cesta extra diferida. Nombres de alumnos y entrega/defensa son personales. No campus, correos ni merge a main.
 
 ## Cambios y definición de terminado
 
-Leer [OPERACION](knowledge-base/OPERACION.md). Actualizar la ficha que posee la información, las relaciones si cambian y el catálogo si se añade una fuente. Ejecutar `python scripts/validate_knowledge_base.py` y `python scripts/review_readiness.py`; revisar el diff. Mantener una sola ficha canónica por fuente y no añadir transcripciones de conversaciones como evidencia docente.
+La memoria es la única resolución canónica; no mantener soluciones paralelas en fichas docentes. Registrar decisiones duraderas en DECISIONES y estado mutable en ESTADO. Repetir pruebas afectadas, recálculo de hojas y revisión visual si cambia la memoria. Ejecutar los dos validadores del repositorio y revisar el diff. Comandos en soluciones/README.
 
-## Resolución del trabajo
-
-La resolución nueva vive en [soluciones/README.md](soluciones/README.md). Para continuar o auditar, leer su [estado](soluciones/ESTADO.md), [matriz](soluciones/MATRIZ_CUMPLIMIENTO.md), [validación](soluciones/VALIDACION.md) y [paquete de auditoría](soluciones/AUDITORIA.md). `MEMORIA.md` es canónica; no mezclar derivaciones nuevas con extracciones docentes. Reproducir con los comandos de su README y mantener hojas/PDF coherentes tras cambios. El extra de cesta permanece opcional pendiente.
+Para cambios en las fuentes normalizadas, leer [índice docente](knowledge-base/README.md), [mapa](knowledge-base/MAPA_RELACIONES.md), [limitaciones](knowledge-base/LIMITACIONES.md), [preparación documental](knowledge-base/REVISION_PREPARACION.md) y [operación](knowledge-base/OPERACION.md). No regenerar todas las fichas ante una duda puntual. Buscar con `rg` y citar fuente/página/diapositiva/celda.

@@ -18,6 +18,21 @@ class TestNormal(unittest.TestCase):
     for key in ['fra','caplet','floorlet']:self.assertLess(abs(a[key]-zero[key]),3e-9)
    a=prices(f,k,.0001,.5,.97);b=prices(f,k,.0001,.5,.97,1e6)
    self.assertAlmostEqual(a['caplet']*1e6,b['caplet'],places=8)
+ def test_quadrature_small_variance(self):
+  # Regresión C-01: antes la cuadratura perdía la masa alrededor de cero.
+  import warnings
+  for f,k in [(.03,.032),(.032,.03),(.03,.03)]:
+   for var in [0.,1e-20,1e-16,1e-12,1e-10,1e-8]:
+    with warnings.catch_warnings():
+     warnings.simplefilter('error')
+     a=prices(f,k,var,.5,.95,1e6);b=integrate(f,k,var,.5,.95,1e6)
+    for key in b:
+     self.assertTrue(np.isfinite(b[key]))
+     self.assertAlmostEqual(a[key],b[key],places=7)
+  self.assertAlmostEqual(integrate(.03,.032,1e-10,.5,.95,1e6)['fra'],
+                         -964.24997625,places=7)
+ def test_quadrature_rejects_invalid_variance(self):
+  with self.assertRaises(ValueError):integrate(.03,.032,-1.,.5,.95)
  def test_zero_time_and_par_strike(self):
   for t in [0,1,3]:
    a=prices(.03,.02,.01**2*t,.5,.95)

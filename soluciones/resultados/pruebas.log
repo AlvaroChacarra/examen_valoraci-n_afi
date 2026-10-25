@@ -5,6 +5,8 @@ test_smoothing_precision (test_ejercicio1.TestJR.test_smoothing_precision) ... o
 test_values_and_exact_probabilities (test_ejercicio1.TestJR.test_values_and_exact_probabilities) ... ok
 test_limits_and_scaling (test_ejercicio2.TestNormal.test_limits_and_scaling) ... ok
 test_quadrature_and_parity (test_ejercicio2.TestNormal.test_quadrature_and_parity) ... ok
+test_quadrature_rejects_invalid_variance (test_ejercicio2.TestNormal.test_quadrature_rejects_invalid_variance) ... ok
+test_quadrature_small_variance (test_ejercicio2.TestNormal.test_quadrature_small_variance) ... ok
 test_zero_time_and_par_strike (test_ejercicio2.TestNormal.test_zero_time_and_par_strike) ... ok
 test_limits_and_sign (test_ejercicio3.TestQuanto.test_limits_and_sign) ... ok
 test_quadrature_and_parities (test_ejercicio3.TestQuanto.test_quadrature_and_parities) ... ok
@@ -12,6 +14,6 @@ test_simulation_martingales (test_ejercicio3.TestQuanto.test_simulation_martinga
 test_stale_cache_and_normal_are_actually_calculated (test_hojas.TestRecalculo.test_stale_cache_and_normal_are_actually_calculated) ... ok
 
 ----------------------------------------------------------------------
-Ran 12 tests in 18.886s
+Ran 14 tests in 21.253s
 
 OK

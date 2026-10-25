@@ -1,0 +1,60 @@
+[
+  {
+    "inputs": {
+      "f": 0.03,
+      "k": 0.032,
+      "variance": 1e-10,
+      "delta": 0.5,
+      "p_u": 0.95,
+      "nominal": 1000000.0
+    },
+    "current_integrator": {
+      "fra": 0.0,
+      "caplet": 0.0,
+      "floorlet": 0.0
+    },
+    "independent_quadrature": {
+      "fra": -964.2499762500009,
+      "caplet": 0.0,
+      "floorlet": 964.2499762500009
+    },
+    "closed_formula": {
+      "fra": -964.2499762500007,
+      "caplet": 0.0,
+      "floorlet": 964.2499762500007,
+      "par_strike": 0.030000000049261084
+    },
+    "warning_summary": {}
+  },
+  {
+    "inputs": {
+      "f": 0.03,
+      "k": 0.03,
+      "variance": 0.0,
+      "delta": 0.5,
+      "p_u": 0.95,
+      "nominal": 1000000.0
+    },
+    "current_integrator": {
+      "fra": "NaN",
+      "caplet": "NaN",
+      "floorlet": "NaN"
+    },
+    "independent_quadrature": {
+      "fra": 0.0,
+      "caplet": 0.0,
+      "floorlet": 0.0
+    },
+    "closed_formula": {
+      "fra": 0.0,
+      "caplet": 0.0,
+      "floorlet": 0.0,
+      "par_strike": 0.03
+    },
+    "warning_summary": {
+      "invalid value encountered in scalar divide": 1,
+      "invalid value encountered in scalar multiply": 945,
+      "The occurrence of roundoff error is detected, which prevents \n  the requested tolerance from being achieved.  The error may be \n  underestimated.": 6
+    }
+  }
+]

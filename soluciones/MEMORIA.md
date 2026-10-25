@@ -78,6 +78,8 @@ Se reconstruye el árbol desde $S_{t_*}=52{,}5$ hasta las mismas fechas $j/12$. 
 
 $$0{,}375^2(1-15/365)+0{,}425^2+0{,}39^2.$$
 
+La reconstrucción es una convención de revaloración fuera de malla: el árbol inicial sólo define precios en sus fechas mensuales. Dividir un paso JR en dos no conserva su distribución de dos ramas, aunque se conserve la martingala. Por tanto, la nueva prima no se presenta como un condicionamiento único del árbol original entre fechas. Se preservan los parámetros de mercado y se aplica JR al intervalo residual. Como sensibilidad, usar medio mes de $1/24$ años da resultados financiados −0,754601, −0,780606 y −0,786203; la europea sigue perdiendo menos. En la difusión de referencia con las mismas fechas, los resultados son aproximadamente −0,725582, −0,751421 y −0,757313, con la misma preferencia.
+
 La suma de intervalos es $3-15/365$ y se mantienen las 14 fechas bermuda. La americana desde el nuevo origen puede ejercerse en ese instante y las restantes fechas originales; sigue siendo una aproximación discreta.
 
 |Contrato|Prima después de 15 días|Cambio $V_*-V_0$|Resultado financiado $V_*-e^{rt_*}V_0$|
@@ -152,6 +154,8 @@ Se utiliza dominio $x\in[-8,8]$, kernel truncado a nueve desviaciones, convoluci
 |JR puro|9,16290759|0,04923963|
 |JR con BS en mes 35|9,13920110|0,02553314|
 
+Esta mejora no se extrapola a otros escenarios: a los 15 días y spot 52,5, el JR puro da 8,39074302, el suavizado 8,39647757 y la referencia de difusión aproximadamente 8,37011514. Los errores son 0,02062788 y 0,02636243, respectivamente: allí el suavizado empeora la precisión aproximadamente un 27,8%. El apartado d vuelve al escenario inicial; es en él donde se demuestra la mejora solicitada.
+
 El suavizado reduce el error aproximadamente un 48,15% en **este** contrato. El error restante procede de los otros intervalos binarios y de las fronteras de ejercicio. No se sostiene que siempre mejore: se demuestra aquí frente a la referencia de difusión; la solución solicitada sigue siendo la de 36 pasos.
 
 ![Pérdida por contrato en el escenario de 15 días y contraste de precisión del suavizado.](figuras/resultado_y_mejora.png){width=95%}
@@ -178,10 +182,9 @@ $$V_t=Nom\,\delta P(t,U)E_t^{Q^U}[g(F_T)(1+\delta F_T)].\tag{E2.1}$$
 
 El factor adicional **multiplica**, no divide el payoff. No se añade el denominador de un FRA comercial liquidado por descuento de su liquidación: sería otro contrato. Este paso retoma el argumento de PDF-008 pp.14–19 pero **no** sus momentos lognormales.
 
-Formalmente, la densidad del cambio de $Q^U$ a la medida $Q^T$, hasta $T$, sería
+Formalmente, con origen en cero la densidad sería $L_s=(1+\delta F_s)/(1+\delta F_0)$. Para valorar condicionalmente desde un tiempo general $t$, se utiliza su incremento:
 
-$$\left.\frac{dQ^T}{dQ^U}\right|_T
-=\frac{1+\delta F_T}{1+\delta F_t}.$$
+$$\frac{L_T}{L_t}=\frac{1+\delta F_T}{1+\delta F_t}.$$
 
 Entonces $V_t=P(t,T)E_t^{Q^T}[H_T]$. Esta igualdad explica por qué descontar en $T$ manteniendo sin cambios la distribución $Q^U$ pierde el ajuste. La positividad de esa densidad se matiza al final: en el normal ilimitado es una identidad formal de la aproximación, no un cambio global de probabilidad exacto.
 
@@ -283,7 +286,7 @@ Al hacer $\sigma_n\to0$ o $T\to t$, $v\to0$; las fórmulas convergen a $Nom\,\de
 |Floorlet in arrears|3.127,920154|
 |Strike de equilibrio|3,00985222%|
 
-La integración adaptativa independiente evalúa directamente $g(f+s z)(1+\delta(f+s z))\phi(z)$, separando en el strike; no llama a las fórmulas de momentos. Coincide a menos de $10^{-7}$ u.m. en 18 escenarios (54 valores de contratos) con tipos y strikes positivos, negativos y cero, y en dos escalas de volatilidad. Se comprueban además paridad, escala nominal, límites de varianza nula y strike de equilibrio. La hoja E2 presenta inputs ilustrativos editables, todos los momentos y las fórmulas de precio.
+La integración adaptativa independiente evalúa directamente $g(f+s z)(1+\delta(f+s z))\phi(z)$, separando en el strike; no llama a las fórmulas de momentos. El integrador trata explícitamente la varianza cero y divide la cuadratura también alrededor del centro de la normal, manteniendo colas infinitas. Esto evita que un strike situado a cientos de desviaciones haga que el algoritmo numérico pierda toda la masa de probabilidad. Las regresiones cubren varianzas pequeñas y el caso degenerado. Coincide a menos de $10^{-7}$ u.m. en 18 escenarios (54 valores de contratos) con tipos y strikes positivos, negativos y cero, y en dos escalas de volatilidad. Se comprueban además paridad, escala nominal, límites de varianza nula y strike de equilibrio. La hoja E2 presenta inputs ilustrativos editables, todos los momentos y las fórmulas de precio.
 
 ## Alcance de la aproximación normal
 
@@ -506,4 +509,4 @@ Se comprueban paridades, $T=0$, $\sigma_S=0$, $\sigma_X=0$ y el caso degenerado 
 
 El PDF y las hojas se generan desde esta memoria y el código con los comandos de `README.md`. `VALIDACION.md` documenta las pruebas ejecutadas y sus límites; `AUDITORIA.md` identifica la revisión concreta y qué contrastar de forma independiente. `DEFENSA.md` reúne preguntas razonadas y el proceso de entrega de PDF-001. La revisión del trabajo no sustituye la comprensión individual ni el ensayo personal de la defensa.
 
-Los nombres reales de los 4–6 integrantes deben completarse antes de la entrega académica. La ventana es del 1 al 8 de noviembre de 2026 a las 23:59. Esta ejecución no sube archivos al campus, no graba al alumno ni envía correos. El extra independiente de cesta sigue opcional pendiente.
+Antes de entregar, completar los nombres del grupo (4–6 integrantes). Ventana: 1–8 de noviembre de 2026, hasta las 23:59. La entrega y defensa son personales; el extra de cesta queda opcional pendiente.
