@@ -23,4 +23,4 @@ La resolución y sus demostraciones se mantienen sólo en [MEMORIA](MEMORIA.md).
 |ENT-2|E2/E3 numéricos sólo ilustrativos|No existen juegos de datos numéricos completos en esos enunciados|No presentar ejemplos propios como inputs docentes|
 |ENT-3|Archivar auditorías viejas; conservar fuentes|Borrar evidencia de defectos impediría trazar correcciones; usarla como estado actual confundiría|VALIDACION es actual; auditoria/historico tiene versiones y fallos anteriores|
 
-No se ha hecho merge a main, entrega en campus ni envío de correos. Extra de cesta+1 explícitamente diferido; callusual+0,5 incluida. Las decisiones se cambian sólo con una justificación y actualización proporcional de memoria, código, hojas y controles.
+La resolución se integra en main por petición expresa del usuario. No se ha realizado entrega en campus ni envío de correos. Extra de cesta+1 explícitamente diferido; callusual+0,5 incluida. Las decisiones se cambian sólo con una justificación y actualización proporcional de memoria, código, hojas y controles.

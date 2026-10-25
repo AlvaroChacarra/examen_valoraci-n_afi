@@ -4,7 +4,7 @@ Base de conocimiento de los materiales de José María Contreras y Javier Calder
 
 La [resolución nueva de los tres ejercicios](soluciones/README.md) incluye memoria PDF, hojas recalculadas, Python, pruebas y guía de defensa. La evidencia docente permanece separada e intacta.
 
-**Rama de la resolución: `solucion/mefc-2026`.** Main conserva la base documental previa. Para otro chat, compartir el enlace a esta rama.
+**Rama canónica de la resolución: `main`.** Incluye la entrega y la guía de aprendizaje de los tres ejercicios. Para otro chat, compartir el repositorio en main.
 
 ## Empezar
 

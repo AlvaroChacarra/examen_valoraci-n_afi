@@ -1,6 +1,6 @@
 # Explicar esta resolución a Álvaro
 
-La resolución vigente está en la rama `solucion/mefc-2026` del repositorio; `main` conserva la base anterior. Usar esa rama al conectar el repositorio al siguiente chat.
+La resolución vigente está integrada en la rama `main` del repositorio. Usar main al conectar el repositorio al siguiente chat.
 
 Este repositorio contiene la resolución y la teoría de apoyo. La sesión de aprendizaje se hará después: este documento permite que otro chat la prepare sin conocer el historial. No es necesario rehacer el trabajo para empezar a explicar una duda.
 
@@ -94,6 +94,6 @@ Orden sugerido:
 
 ## Un inicio útil para el siguiente chat
 
-«Usa la rama solucion/mefc-2026 de AlvaroChacarra/examen_valoraci-n_afi. Lee AGENTS.md y soluciones/GUIA_PARA_EL_AGENTE.md. Quiero entender el ejercicio [n], apartado [x]. Usa la memoria canónica, distingue enunciado, supuestos y derivación; explícame el mecanismo y reconstruye las cuentas conmigo, consultando sólo la teoría necesaria.»
+«Usa la rama main de AlvaroChacarra/examen_valoraci-n_afi. Lee AGENTS.md y soluciones/GUIA_PARA_EL_AGENTE.md. Quiero entender el ejercicio [n], apartado [x]. Usa la memoria canónica, distingue enunciado, supuestos y derivación; explícame el mecanismo y reconstruye las cuentas conmigo, consultando sólo la teoría necesaria.»
 
 Si falta una fuente real, indicarlo. No inventar datos, resultados ni una aprobación de entrega; completar nombres y realizar la defensa sigue correspondiendo al alumno.

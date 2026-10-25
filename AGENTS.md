@@ -18,7 +18,7 @@ Leer [ejecución y entregables](soluciones/README.md), [validación](soluciones/
 - E1: no sustituir meses por una malla de varianza; réplica exacta sólo en el árbol puro. La reconstrucción de 15 días es una convención y el suavizado sólo demuestra mejora en el origen.
 - E2: pago en T, bono U como numerario, normal formal sin truncar. La normal no define globalmente bonos positivos.
 - E3: FX EUR/USD, transformar correlaciones M,N frente a observables; quanto con conversión fija.
-- Cesta extra diferida. Nombres de alumnos y entrega/defensa son personales. No campus, correos ni merge a main.
+- Cesta extra diferida. Nombres de alumnos y entrega/defensa son personales. No campus ni correos. La integración de la resolución en main está autorizada por el usuario.
 
 ## Cambios y definición de terminado
 
