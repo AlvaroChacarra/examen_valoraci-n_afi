@@ -508,5 +508,3 @@ Se comprueban paridades, $T=0$, $\sigma_S=0$, $\sigma_X=0$ y el caso degenerado 
 # Entrega, defensa y reproducibilidad
 
 El PDF y las hojas se generan desde esta memoria y el código con los comandos de `README.md`. `VALIDACION.md` documenta las pruebas ejecutadas y sus límites; `AUDITORIA.md` identifica la revisión concreta y qué contrastar de forma independiente. `DEFENSA.md` reúne preguntas razonadas y el proceso de entrega de PDF-001. La revisión del trabajo no sustituye la comprensión individual ni el ensayo personal de la defensa.
-
-Antes de entregar, completar los nombres del grupo (4–6 integrantes). Ventana: 1–8 de noviembre de 2026, hasta las 23:59. La entrega y defensa son personales; el extra de cesta queda opcional pendiente.

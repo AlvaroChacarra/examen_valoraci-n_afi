@@ -12,7 +12,7 @@ Comprobación estructural y de integridad, no recalculación de los modelos fina
 | PPT / diapositivas | 1 / 25 |
 | Fichas interpretativas | 59 |
 | Imágenes Excel deduplicadas | 60 |
-| Enlaces relativos comprobados | 812 |
+| Enlaces relativos comprobados | 814 |
 | Fallos estructurales | 0 |
 
 ## Alcance de la revisión

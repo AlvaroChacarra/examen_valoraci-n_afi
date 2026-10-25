@@ -49,3 +49,5 @@ Límites que debe explicar un agente:
 ## Cierre de esta actualización
 
 Reproducción completa ejecutada con 14 tests aprobados y hojas recalculadas sin errores de fórmula: máximo error de nodo6,14e-12u.m.; 46.868estados y33auxiliares contrastados. PDF final de18páginas leído visualmente; márgenes sin recortes detectados. Las precisiones editoriales finales se recompilaron después de la reproducción numérica. Otro agente ha contrastado C-01 contra la versión anterior y ha revisado las rutas de estudio sin modificar la solución.
+
+Informe de la comprobación por otro agente: [REVISION_ACTUAL](auditoria/REVISION_ACTUAL.md). Su alcance es C-01 y navegación; el recálculo XLSX y la revisión visual del PDF son controles del responsable, no una segunda auditoría independiente de todos los binarios.

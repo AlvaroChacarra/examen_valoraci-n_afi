@@ -21,3 +21,7 @@ Los scripts de contraste son auxiliares reutilizables. El de E1 conserva una eti
 Priorizar: calendario/volatilidades por periodo, primera parada y réplica autofinanciada; diferencia entre árbol y difusión; factor de pagoT bajo medidaU; integrador cerca de v=0; transformación de correlaciones y unidades FX. Comprobar también que otro chat localice cada respuesta con la guía y reconstruya el motivo de las decisiones.
 
 [Histórico de auditorías](auditoria/historico/README.md): conserva fallos y cierres anteriores, separado de la navegación de estudio. No es una segunda resolución ni una aprobación automática de cambios posteriores.
+
+## Última revisión
+
+[Revisión de C-01 y navegación de estudio](auditoria/REVISION_ACTUAL.md): PASS en ese alcance, con hashes de los archivos inspeccionados. Los controles de entregables ejecutados por el responsable se registran en VALIDACION y resultados. El código/tests revisados se fijaron en `23aa1b3`; el commit posterior de cierre añade evidencia y el ajuste editorial final, sin cambios de cálculo.
